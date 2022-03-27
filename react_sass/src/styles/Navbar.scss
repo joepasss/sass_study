@@ -1,0 +1,31 @@
+@import '../variables/Variables.scss';
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: $blackColor;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar a {
+  color: $whiteColor;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: $titleFont;
+  margin: 1rem;
+}
+
+.navbar .links {
+  margin-right: 2.5rem;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+button {
+  @include buttonStyle();
+}

@@ -1,0 +1,19 @@
+@import '../variables/Variables.scss';
+
+.mainPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $redColor;
+  }
+
+  button {
+    @include buttonStyle($redColor, 15px);
+  }
+}
+
+button {
+  @include buttonStyle(purple, 35px);
+}
