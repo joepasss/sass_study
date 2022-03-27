@@ -2,7 +2,7 @@
 ul {
   background-color: lightslategray;
   padding: 20px;
-  /* height: 300px; */ /* added for flex flow of columns */
+  height: 300px; /* added for flex flow of columns */
 
   /* display: inline-flex; */ /* it acts as though it is inline, but for a flex container */
 
@@ -102,17 +102,45 @@ ul {
   /* 4.6 */
   /* Space Evenly */
   /* justify-content: space-evenly; */
-}
 
-/* Flex Items => Children */
-li {
-  /* display: inline-block; */
-  list-style: none;
-  color: white;
-  background-color: #20b2aa;
-  margin: 20px;
-  padding: 10px;
-  width: 100px;
-  font-size: 20px;
-  text-align: center;
+  /*-*-*-*-*-*-*-*-*-*-----(4)ALIGN ITEMS-----*-*-*-*-*-*-*-*-*-*/
+
+  /* 5.1 */
+  /* Stretch (default) */
+  // align-items: stretch;
+
+  /* 5.2 */
+  /* flex start */
+  // align-items: flex-start;
+
+  /* 5.3 */
+  /* flex end */
+  // align-items: flex-end;
+
+  /* 5.4 */
+  /* center */
+  // align-items: center;
+
+  /* 5.5 */
+  /* Baseline */
+  align-items: baseline;
+  //
+
+  /* Flex Items => Children */
+  li {
+    /* display: inline-block; */
+    list-style: none;
+    color: white;
+    background-color: #20b2aa;
+    margin: 20px;
+    padding: 10px;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    // height: 100px; // if children decleard its height parents stretch align is gone
+
+    &:first-child {
+      padding: 5px;
+    }
+  }
 }
