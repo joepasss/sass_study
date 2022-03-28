@@ -2,7 +2,8 @@
 ul {
   background-color: lightslategray;
   padding: 20px;
-  height: 300px; /* added for flex flow of columns */
+  height: 600px;
+  flex-wrap: wrap;
 
   /* display: inline-flex; */ /* it acts as though it is inline, but for a flex container */
 
@@ -103,7 +104,7 @@ ul {
   /* Space Evenly */
   /* justify-content: space-evenly; */
 
-  /*-*-*-*-*-*-*-*-*-*-----(4)ALIGN ITEMS-----*-*-*-*-*-*-*-*-*-*/
+  /*-*-*-*-*-*-*-*-*-*-----(5)ALIGN ITEMS-----*-*-*-*-*-*-*-*-*-*/
 
   /* 5.1 */
   /* Stretch (default) */
@@ -123,8 +124,37 @@ ul {
 
   /* 5.5 */
   /* Baseline */
-  align-items: baseline;
-  //
+  // align-items: baseline;
+
+  /*-*-*-*-*-*-*-*-*-*-----(6)ALIGN CONTENT-----*-*-*-*-*-*-*-*-*-*/
+
+  /* 6.1 */
+  /* Stretch (default) */
+  // align-content: stretch;
+
+  /* 6.2 */
+  /* Flex start */
+  // align-content: flex-start;
+
+  /* 6.3 */
+  /* Flex end */
+  // align-content: flex-end;
+
+  /* 6.4 */
+  /* Space Between */
+  // align-content: space-between;
+
+  /* 6.5 */
+  /* Space around */
+  // align-content: space-around;
+
+  /* 6.6 */
+  /* Space Evenly */
+  // align-content: space-evenly;
+
+  /* 6.7 */
+  /* Center */
+  // align-content: center;
 
   /* Flex Items => Children */
   li {
