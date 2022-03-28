@@ -3,7 +3,6 @@ ul {
   background-color: lightslategray;
   padding: 20px;
   // height: 600px;
-  flex-wrap: wrap;
 
   /* display: inline-flex; */ /* it acts as though it is inline, but for a flex container */
 
@@ -56,12 +55,19 @@ ul {
     // }
 
     /*-*-*-*-*-*-*-*-*-*-----(2)Flex GROW-----*-*-*-*-*-*-*-*-*-*/
-    /* Flex Grow (Default => 0) */
+    /* Flex Grow (Default => 0 => off) */
+    // &:first-child {
+    //   flex-grow: 1;
+    // }
+    // &:nth-child(3) {
+    //   flex-grow: 2;
+    // }
+
+    /*-*-*-*-*-*-*-*-*-*-----(3)Flex SHRINK-----*-*-*-*-*-*-*-*-*-*/
+    /* Flex Grow (Default => 1 => on) */
+
     &:first-child {
-      flex-grow: 1;
-    }
-    &:nth-child(3) {
-      flex-grow: 2;
+      flex-shrink: 0;
     }
   }
 }
