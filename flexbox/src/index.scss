@@ -9,8 +9,6 @@ ul {
 
   /* Flex Container Properties */
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
 
   /* Flex Items => Children */
   li {
@@ -28,32 +26,42 @@ ul {
 
     /* When the flex direction is Row/Column */
     // if order value is 0 it means default value
-    // ordering from bottom(end)
+
+    // // ordering from bottom(end)
+    // &:nth-child(3) {
+    //   order: 1;
+    // }
+
+    // &:nth-child(1) {
+    //   order: 3;
+    // }
+
+    // &:nth-child(6) {
+    //   order: 2;
+    // }
+
+    // &:nth-child(5) {
+    //   // last
+    //   order: 5;
+    // }
+
+    // // ordering from top(start)
+    // &:nth-child(8) {
+    //   //first
+    //   order: -1;
+    // }
+
+    // &:nth-child(2) {
+    //   order: -2;
+    // }
+
+    /*-*-*-*-*-*-*-*-*-*-----(2)Flex GROW-----*-*-*-*-*-*-*-*-*-*/
+    /* Flex Grow (Default => 0) */
+    &:first-child {
+      flex-grow: 1;
+    }
     &:nth-child(3) {
-      order: 1;
-    }
-
-    &:nth-child(1) {
-      order: 3;
-    }
-
-    &:nth-child(6) {
-      order: 2;
-    }
-
-    &:nth-child(5) {
-      // last
-      order: 5;
-    }
-
-    // ordering from top(start)
-    &:nth-child(8) {
-      //first
-      order: -1;
-    }
-
-    &:nth-child(2) {
-      order: -2;
+      flex-grow: 2;
     }
   }
 }
