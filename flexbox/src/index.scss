@@ -8,6 +8,7 @@ ul {
 
   /* Flex Container Properties */
   display: flex;
+  // flex-wrap: wrap;
 
   /* Flex Items => Children */
   li {
@@ -66,8 +67,20 @@ ul {
     /*-*-*-*-*-*-*-*-*-*-----(3)Flex SHRINK-----*-*-*-*-*-*-*-*-*-*/
     /* Flex Grow (Default => 1 => on) */
 
+    // &:first-child {
+    //   flex-shrink: 0;
+    // }
+
+    /*-*-*-*-*-*-*-*-*-*-----(4)Flex BASIS-----*-*-*-*-*-*-*-*-*-*/
+    /* FLEX BASIS (Default => Auto) */
     &:first-child {
-      flex-shrink: 0;
+      flex-basis: 25rem;
     }
+
+    // &:nth-child(2) {
+    //   flex-basis: 10rem;
+    // }
+
+    // if use with flex grow flex grow part is first shrink part (more responsive)
   }
 }
