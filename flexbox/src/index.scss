@@ -2,13 +2,15 @@
 ul {
   background-color: lightslategray;
   padding: 20px;
-  // height: 600px;
+  height: 300px;
 
   /* display: inline-flex; */ /* it acts as though it is inline, but for a flex container */
 
   /* Flex Container Properties */
   display: flex;
   flex-wrap: wrap;
+
+  align-items: flex-start;
 
   /* Flex Items => Children */
   li {
@@ -87,8 +89,45 @@ ul {
 
     /*-*-*-*-*-*-*-*-*-*-----(5)Flex SHORTHAND-----*-*-*-*-*-*-*-*-*-*/
     /* flex Shorthand (flex-grow flex-shrink flex-basis) */
+    // &:first-child {
+    //   flex: 1 0 20rem;
+    // }
+
+    /*-*-*-*-*-*-*-*-*-*-----(6)Align Self-----*-*-*-*-*-*-*-*-*-*/
+    // 6.1
+    /* Auto (Default) => Aligns according to parent's align-items property's value */
+    // &:first-child {
+    //   align-self: auto;
+    // }
+
+    // 6.2
+    /* Flex End */
+    // &:first-child {
+    //   align-self: flex-end;
+    // }
+
+    // 6.3
+    /* Center */
+    // &:first-child {
+    //   align-self: center;
+    // }
+
+    // 6.4
+    /* Strech */
+    // &:first-child {
+    //   align-self: stretch;
+    // }
+
+    // 6.5
+    /* base-line */
+    // &:first-child {
+    //   align-self: baseline;
+    // }
+
+    // 6.6
+    /* Flex-start */
     &:first-child {
-      flex: 1 0 20rem;
+      align-self: flex-start;
     }
   }
 }
