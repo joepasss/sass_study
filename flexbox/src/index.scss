@@ -8,7 +8,7 @@ ul {
 
   /* Flex Container Properties */
   display: flex;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
 
   /* Flex Items => Children */
   li {
@@ -60,12 +60,12 @@ ul {
     // &:first-child {
     //   flex-grow: 1;
     // }
-    // &:nth-child(3) {
+    // &:nth-child(2) {
     //   flex-grow: 2;
     // }
 
     /*-*-*-*-*-*-*-*-*-*-----(3)Flex SHRINK-----*-*-*-*-*-*-*-*-*-*/
-    /* Flex Grow (Default => 1 => on) */
+    /* Flex Shrink (Default => 1 => on) */
 
     // &:first-child {
     //   flex-shrink: 0;
@@ -73,9 +73,11 @@ ul {
 
     /*-*-*-*-*-*-*-*-*-*-----(4)Flex BASIS-----*-*-*-*-*-*-*-*-*-*/
     /* FLEX BASIS (Default => Auto) */
-    &:first-child {
-      flex-basis: 25rem;
-    }
+    // &:first-child {
+    //   flex-basis: 25rem;
+    // }
+
+    // flex-grow -> shrink -> flex-basis 순서로 responsive
 
     // &:nth-child(2) {
     //   flex-basis: 10rem;
