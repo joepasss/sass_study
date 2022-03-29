@@ -84,5 +84,11 @@ ul {
     // }
 
     // if use with flex grow flex grow part is first shrink part (more responsive)
+
+    /*-*-*-*-*-*-*-*-*-*-----(5)Flex SHORTHAND-----*-*-*-*-*-*-*-*-*-*/
+    /* flex Shorthand (flex-grow flex-shrink flex-basis) */
+    &:first-child {
+      flex: 1 0 20rem;
+    }
   }
 }
