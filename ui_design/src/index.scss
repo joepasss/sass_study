@@ -5,45 +5,17 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: beige;
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgb(61, 70, 78);
 }
 
-.container {
+.section {
+  background-color: rgb(7, 55, 119);
   display: flex;
 
-  .card {
-    width: 400px;
-    background-color: rgb(166, 248, 159);
-    margin: 0 15px 0;
-
-    img {
-      width: 400px;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    .contents {
-      display: flex;
-      flex-direction: column;
-
-      p:first-of-type,
-      h3,
-      p:last-of-type {
-        text-align: left;
-        margin-top: 15px;
-        margin-left: 25px;
-      }
-
-      p:last-of-type {
-        margin-bottom: 20px;
-        margin-right: 20px;
-        line-height: 1.6;
-      }
-    }
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
   }
 }

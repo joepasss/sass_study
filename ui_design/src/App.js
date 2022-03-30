@@ -1,7 +1,9 @@
 function App() {
   return (
-    <div className='container'>
-      <div className='card dog'>
+    // main#main-content>section*3.section.sections-$>img+div.content>p{Nov 15, 2100}+h3{Some Title}+p{Some Text}
+
+    <main id='main-content'>
+      <section className='section section-1'>
         <img
           src='https://thumbs.dreamstime.com/b/golden-retriever-dog-21668976.jpg'
           alt=''
@@ -16,9 +18,9 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className='card moose'>
+      <section className='section section-2'>
         <img
           src='https://i0.wp.com/wilderness-society.org/wp-content/uploads/2021/03/moose-70254.jpg'
           alt=''
@@ -33,9 +35,9 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className='card owl'>
+      <section className='section section-3'>
         <img
           src='https://images.unsplash.com/photo-1543549790-8b5f4a028cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlYXQlMjBob3JuZWQlMjBvd2x8ZW58MHx8MHx8&w=1000&q=80'
           alt=''
@@ -50,8 +52,8 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
