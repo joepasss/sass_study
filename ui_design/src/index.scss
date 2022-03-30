@@ -5,30 +5,60 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #444e5c;
+  border-left: 17px solid rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  padding: 30px;
 }
 
-// White Space
-.white-space {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.container {
+  width: 80%;
+  margin: 0 auto;
 
-  .sports {
-    width: 320px;
-    background-color: aquamarine;
-    padding: 35px;
+  a {
+    color: white;
+    text-decoration: none;
   }
 
-  .basketball {
-    padding: 27px;
+  a.logo {
+    display: block;
+    padding-top: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+  h1 {
+    margin: 64px 0 30px 30px;
+    color: white;
+  }
 
-    p {
-      line-height: 1.6;
-      // line-height: 25px;
-    }
+  p {
+    color: #b2cef2;
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  a.cta {
+    display: inline-block;
+    background: #5099ff;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 30px;
+    transform: translateX(50%);
+    margin-top: 32px;
+  }
+}
+
+// improvement
+.container {
+  border-left: 1px solid rgba(255, 255, 255, 0);
+
+  h1 {
+    margin-left: 0;
+  }
+
+  a.cta {
+    transform: none;
   }
 }
