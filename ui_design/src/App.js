@@ -39,7 +39,7 @@ function App() {
 
       <section className='section section-3'>
         <img
-          src='https://images.unsplash.com/photo-1543549790-8b5f4a028cfb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlYXQlMjBob3JuZWQlMjBvd2x8ZW58MHx8MHx8&w=1000&q=80'
+          src='https://www.allaboutbirds.org/guide/assets/photo/297366501-480px.jpg'
           alt=''
         />
         <div className='contents'>
