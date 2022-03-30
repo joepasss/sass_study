@@ -7,9 +7,9 @@ function App() {
           alt=''
         />
         <div className='contents'>
-          <p className='date'>Nov 10, 2100</p>
+          <p>Nov 10, 2100</p>
           <h3>DOG</h3>
-          <p className='content'>
+          <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
             laborum possimus dolore non illo sint, eveniet nihil labore quidem
             magnam quo consequatur et minima blanditiis impedit debitis, neque,
@@ -24,9 +24,9 @@ function App() {
           alt=''
         />
         <div className='contents'>
-          <p className='date'>Nov 10, 2100</p>
+          <p>Nov 10, 2100</p>
           <h3>Moose</h3>
-          <p className='content'>
+          <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
             laborum possimus dolore non illo sint, eveniet nihil labore quidem
             magnam quo consequatur et minima blanditiis impedit debitis, neque,
@@ -41,9 +41,9 @@ function App() {
           alt=''
         />
         <div className='contents'>
-          <p className='date'>Nov 10, 2100</p>
+          <p>Nov 10, 2100</p>
           <h3>Owl</h3>
-          <p className='content'>
+          <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
             laborum possimus dolore non illo sint, eveniet nihil labore quidem
             magnam quo consequatur et minima blanditiis impedit debitis, neque,

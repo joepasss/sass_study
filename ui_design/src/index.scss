@@ -19,6 +19,7 @@ body {
   .card {
     width: 400px;
     background-color: rgb(166, 248, 159);
+    margin: 0 15px 0;
 
     img {
       width: 400px;
@@ -30,13 +31,18 @@ body {
       display: flex;
       flex-direction: column;
 
-      .date {
-        align-self: center;
+      p:first-of-type,
+      h3,
+      p:last-of-type {
+        text-align: left;
+        margin-top: 15px;
+        margin-left: 25px;
       }
 
-      h3 {
-        font-size: 16px;
-        align-self: flex-end;
+      p:last-of-type {
+        margin-bottom: 20px;
+        margin-right: 20px;
+        line-height: 1.6;
       }
     }
   }
