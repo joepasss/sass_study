@@ -1,7 +1,7 @@
 function App() {
   return (
-    <div className='container'>
-      <div className='card dog'>
+    <main id='main-content'>
+      <section className='section section-1'>
         <img
           src='https://thumbs.dreamstime.com/b/golden-retriever-dog-21668976.jpg'
           alt=''
@@ -16,9 +16,9 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className='card moose'>
+      <section className='section section-2'>
         <img
           src='https://i0.wp.com/wilderness-society.org/wp-content/uploads/2021/03/moose-70254.jpg'
           alt=''
@@ -33,9 +33,9 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
+      </section>
 
-      <div className='card owl'>
+      <section className='section section-3'>
         <img
           src='https://assets.technologynetworks.com/production/dynamic/images/content/342327/unique-dna-packaging-in-owl-eyes-may-be-a-lens-that-enhances-night-vision-342327-1280x720.jpg?cb=10962144'
           alt=''
@@ -50,8 +50,8 @@ function App() {
             hic ea?
           </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
 
