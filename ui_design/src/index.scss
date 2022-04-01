@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Oswald|Spicy+Rice&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,51 +7,41 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(61, 70, 78);
+  background-color: #1f0252;
 }
 
-#main-content {
-  padding: 30px;
+header {
+  height: 5rem;
+  background-color: #7141c4;
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+section {
+  padding: 3rem 2rem 2rem;
+  background-color: #3c1581;
 
-  .section {
-    background-color: rgb(131, 167, 214);
-    display: flex;
-    width: 70%;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.35s ease-in-out;
+  h1,
+  p {
+    color: white;
+  }
 
-    &:hover {
-      transform: scale(1.05);
-    }
+  h1 {
+    margin: 0;
+  }
 
-    img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+  p {
+    margin: 2rem 0;
+  }
 
-    .contents {
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-
-      p:not(:first-of-type) {
-        font-size: 20px;
-      }
-
-      h3 {
-        font-size: 30px;
-        margin-bottom: 10px;
-      }
-    }
+  a {
+    background-color: #feed00;
+    padding: 0.5rem 2.3rem;
+    display: inline-block;
+    color: #3c1581;
+    text-decoration: none;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
