@@ -1,4 +1,9 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
   background-color: #7141c4;
   height: 100vh;
 
@@ -7,12 +12,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-section {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: lightyellow;
-  margin: 30px 50px;
+  section {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: lightyellow;
+    margin: 30px 50px;
+  }
+
+  /*  Scenario 1 => Alignment */
+  // section:first-child {
+  //   align-self: flex-start;
+  // }
+
+  /*  Scenario 2 => Contrast */
+  // section {
+  //   background-color: rgba(255, 255, 255, 0.4);
+  // }
+
+  // section:nth-child(3) {
+  //   background-color: rgba(255, 255, 255, 1);
+  // }
+
+  /* Scenario 3 => Color */
+  // section:nth-child(4) {
+  //   background-color: #feed00;
+  // }
+
+  /* Scenario 4 => Scale */
+  // section {
+  //   transform: scale(0.89);
+  // }
+
+  // section:nth-child(4) {
+  //   transform: scale(1.5);
+  // }
 }
