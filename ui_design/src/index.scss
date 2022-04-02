@@ -58,3 +58,33 @@ section {
     font-size: 0.8rem;
   }
 }
+
+/* improvement */
+body {
+  background-color: white;
+  color: #1c2022;
+}
+
+section {
+  border-left: 0.7rem solid #ff01ff;
+
+  p {
+    color: #2b3337;
+  }
+
+  input[type='text'],
+  textarea {
+    background-color: white;
+    border-bottom: 1px solid #506671;
+    color: #2b3337;
+  }
+
+  input[type='submit'] {
+    background-color: #ff01ff;
+  }
+
+  input[type='text']:focus,
+  textarea:focus {
+    border-bottom: #ff01ff 1px solid;
+  }
+}
