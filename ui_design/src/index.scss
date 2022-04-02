@@ -1,64 +1,51 @@
-body {
-  padding: 2rem;
-  background: #5801cb;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-  section {
-    h1 {
-      font-size: 1rem;
-    }
-
-    form {
-      width: 500px;
-      padding: 20px;
-
-      label {
-        display: block;
-        padding: 10px 0;
-      }
-
-      .input-container {
-        input[type='email'] {
-          padding: 10px;
-          width: 70%;
-          border: none;
-          margin: 0 5px 0 0;
-        }
-
-        input[type='submit'] {
-          border: 1px solid white;
-          padding: 10px;
-          color: white;
-          background: none;
-        }
-      }
-    }
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
-/*  improvement */
-body {
-  section {
-    h1 {
-      font-size: 2.8rem;
+#root {
+  background: #014bcb;
+  height: 100vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+}
+
+aside {
+  background: #1d3154;
+  width: 5%;
+  height: 100vh;
+}
+
+main {
+  width: 30%;
+
+  h1 {
+    margin-left: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .content {
+    background: #6c22ff;
+    margin-right: 2rem;
+    border-radius: 0.8rem;
+
+    h3 {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #ff69f5;
     }
 
-    form {
-      background-color: #6900f3;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 0;
 
-      label {
-        font-weight: bold;
-        font-size: 1rem;
-      }
-
-      .input-container {
-        input[type='submit'] {
-          font-size: 0.8rem;
-          background-color: #ffed8c;
-          color: #5801cb;
-          font-weight: bold;
-        }
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
       }
     }
   }
