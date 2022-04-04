@@ -1,49 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
+  padding: 2rem;
+  background: #5801cb;
+  color: white;
+  font-family: 'Quicksand';
 }
 
-#root {
-  background-color: #7141c4;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  section {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: lightyellow;
-    margin: 30px 50px;
+section {
+  h1 {
+    font-size: 2.8rem;
   }
 
-  /*  Alignment  */
-  section:first-child {
-    align-self: flex-start;
-  }
+  form {
+    width: 500px;
+    padding: 20px;
 
-  /*  Contrast  */
-  section {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
+    label {
+      display: block;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1rem;
+    }
 
-  section:nth-child(4) {
-    background-color: rgba(255, 255, 255, 1);
-  }
+    .input-container {
+      input[type='email'] {
+        padding: 10px;
+        width: 70%;
+        border: none;
+        margin: 0 5px 0 0;
+      }
 
-  /*  Color  */
-  section:nth-child(3) {
-    background-color: #feed00;
-  }
-
-  /*  Scale  */
-  section {
-    transform: scale(0.89);
-  }
-
-  section:nth-child(2) {
-    transform: scale(1.5);
+      input[type='submit'] {
+        border: 1px solid white;
+        padding: 10px;
+        color: #5801cb;
+        font-size: 0.8rem;
+        background-color: #ffed8c;
+        font-weight: bold;
+      }
+    }
   }
 }
