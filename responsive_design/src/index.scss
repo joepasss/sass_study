@@ -12,16 +12,38 @@ All changes are applied to the body element
   padding: 0;
 }
 
-body {
-  background-color: blueviolet;
-}
+// body {
+//   background-color: blueviolet;
+// }
 
+// @media screen and (max-width: 400px) {
+//   body {
+//     background-color: lawngreen;
+//   }
+// }
+
+// @media screen and (min-width: 600px) {
+//   body {
+//     background-color: darkred;
+//   }
+// }
+
+// Solution
+// 0 to 400px
 @media screen and (max-width: 400px) {
   body {
     background-color: lawngreen;
   }
 }
 
+// 401 to 599px
+@media screen and (min-width: 401px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+
+// 600px to above
 @media screen and (min-width: 600px) {
   body {
     background-color: darkred;
