@@ -2,3 +2,21 @@
   margin: 0;
   padding: 0;
 }
+
+/* Viewport Width => vw */
+/* Viewport height => vh */
+img:first-of-type {
+  // width: 50vw;
+  // height: 50vh;
+
+  // border: lightslategray 3px solid;
+
+  // object-fit: contain;
+  display: none;
+}
+
+// Vmin -- Vmax
+img:last-of-type {
+  // width: 50vmin;
+  width: 50vmax;
+}
