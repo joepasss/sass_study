@@ -1,51 +1,12 @@
-/*
-All changes are applied to the body element
-
-• From 0 to 400px, set background color to lawn green
-• From 401px to 599px, set the background color to blue violet
-• 600px or wider, set the background color to dark red
-
-*/
-
 * {
   margin: 0;
   padding: 0;
 }
 
-// body {
-//   background-color: blueviolet;
-// }
-
-// @media screen and (max-width: 400px) {
-//   body {
-//     background-color: lawngreen;
-//   }
-// }
-
-// @media screen and (min-width: 600px) {
-//   body {
-//     background-color: darkred;
-//   }
-// }
-
-// Solution
-// 0 to 400px
-@media screen and (max-width: 400px) {
-  body {
-    background-color: lawngreen;
-  }
+img:first-of-type {
+  width: 50vh;
 }
 
-// 401 to 599px
-@media screen and (min-width: 401px) {
-  body {
-    background-color: blueviolet;
-  }
-}
-
-// 600px to above
-@media screen and (min-width: 600px) {
-  body {
-    background-color: darkred;
-  }
+img:last-of-type {
+  width: 50vmax;
 }

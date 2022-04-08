@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alignment -- justify-content</title>
+  </head>
+  <body>
+    <div class="main">
+      <style>
+        .main {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: rgb(212, 212, 212);
+          padding-bottom: 20px;
+        }
+
+        h1 {
+          padding: 20px;
+          font-size: 20px;
+        }
+
+        ul {
+          margin: 0 auto;
+          padding: 20px;
+          height: 300px;
+          display: flex;
+          background-color: gray;
+          width: 90%;
+          flex-wrap: wrap;
+          height: 400px;
+        }
+
+        li {
+          list-style: none;
+          color: black;
+          margin: 20px;
+          padding: 10px;
+          width: 100px;
+          font-size: 20px;
+          text-align: center;
+          background-color: rgb(255, 255, 255);
+        }
+
+        .select-group {
+          margin: 20px;
+          background-color: white;
+          padding: 20px;
+          display: flex;
+          justify-content: center;
+          border-radius: 15px;
+          text-align: center;
+          justify-content: space-evenly;
+        }
+
+        .selecter {
+          background-color: white;
+        }
+
+        p {
+          background-color: white;
+        }
+      </style>
+      <h1>align-itmes, align-content</h1>
+      <ul
+        id="container"
+        style="
+          justify-content: center;
+          align-items: flex-stretch;
+          align-content: stretch;
+        "
+      >
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+        <li>4th</li>
+        <li>5th</li>
+        <li>6th</li>
+        <li>7th</li>
+        <li>8th</li>
+        <li>9th</li>
+        <li>10th</li>
+        <li>11th</li>
+        <li>12th</li>
+      </ul>
+
+      <div class="select-group">
+        <div class="selecter">
+          <p>justify-content</p>
+          <select id="justify-content">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+          </select>
+        </div>
+
+        <div class="selecter">
+          <p>align-items</p>
+          <select id="align-itmes">
+            <option value="stretch">stretch</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="baseline">baseline</option>
+          </select>
+        </div>
+
+        <div class="selecter">
+          <p>align-content</p>
+          <select id="align-content">
+            <option value="stretch">stretch</option>
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center">center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+          </select>
+        </div>
+      </div>
+
+      <script>
+        var justifyContent = document.getElementById('justify-content');
+
+        justifyContent.addEventListener('change', function (evt) {
+          document.getElementById('container').style.justifyContent =
+            evt.target.value;
+        });
+
+        var alignitmes = document.getElementById('align-itmes');
+        alignitmes.addEventListener('change', function (evt) {
+          document.getElementById('container').style.alignItems =
+            evt.target.value;
+          console.log(evt.target.value);
+        });
+
+        var alignContent = document.getElementById('align-content');
+        alignContent.addEventListener('change', function (evt) {
+          document.getElementById('container').style.alignContent =
+            evt.target.value;
+        });
+      </script>
+    </div>
+  </body>
+</html>
