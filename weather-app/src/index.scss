@@ -67,3 +67,66 @@ div.weather__info {
 
   margin: 5rem 0;
 }
+
+// Weather Temp container
+div.weather__temp {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// 900 px or wider
+@media screen and (min-width: 900px) {
+  section#weather {
+    width: 90rem;
+  }
+}
+
+// 800px or smaller
+@media screen and (max-width: 800px) {
+  section#weather {
+    div.weather__temp {
+      flex-direction: column;
+
+      // Day Containers
+      div {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// 600px or smaller
+@media screen and (max-width: 600px) {
+  section#weather {
+    h1 {
+      padding: 0 2rem;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
+
+// 500px or smaller
+@media screen and (max-width: 500px) {
+  .icons {
+    font-size: 2.5rem;
+  }
+
+  section#weather {
+    h1 {
+      font-size: 3rem;
+      padding: 0 1rem;
+    }
+
+    div.weather__info__temp {
+      padding: 1rem;
+
+      div.weather__info {
+        font-size: 0.7rem;
+        align-items: flex-end;
+      }
+    }
+  }
+}
