@@ -1,56 +1,23 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-// Sticky footer
-:root {
-  font-size: 62.5%;
-}
+.app {
+  height: 40vh;
+  background-color: lightsalmon;
 
-header {
-  background-color: lightsteelblue;
-  height: 7.5rem;
-}
-
-section {
-  background-color: lightskyblue;
-  height: 30rem;
-}
-
-footer {
-  background-color: lightseagreen;
-  height: 8.5rem;
-}
-
-header,
-section,
-footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  font-size: 2.5rem;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  // padding: 80px;
+  // padding: 10vh 5vw;
+  padding: calc(5px + 2vh) calc(5px + 2vw);
 }
 
-// First Solution
-// section {
-//   height: calc(100vh - 7.5rem - 8.5rem);
-// }
-
-// Second solution => Recommended
-body {
-  div#root {
-    div {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-
-      section {
-        flex-grow: 1;
-      }
-    }
-  }
+p {
+  margin-bottom: 3vh;
 }
