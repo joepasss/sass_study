@@ -1,32 +1,49 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-}
-
-// root => html => replace px with rem
-:root {
-  font-size: 10px;
-}
-
-h1 {
   font-family: sans-serif;
-  text-align: center;
-  // font-size: 3vw;
 
-  // For smaller screen sizes
-  // font-size: calc(14px + 2vw);
+  div {
+    background-color: indigo;
+    color: white;
 
-  font-size: calc(1.4rem + 2vw); // root 10 px = 1rem is 10px
-}
+    // Full Screen
+    height: 100vh;
 
-// For larger screens
-@media screen and (min-height: 1500px) {
+    // Optional
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   h1 {
-    font-size: 45px;
+    margin-bottom: 4rem;
+    font-size: 68px;
+    font-weight: 300;
+    letter-spacing: 4px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    border: 1px white solid;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin-top: 40px;
+
+    transition: all 0.35s ease-in-out;
+
+    &:hover {
+      color: indigo;
+      background-color: white;
+    }
   }
 }
