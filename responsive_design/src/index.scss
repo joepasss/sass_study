@@ -5,19 +5,25 @@
 }
 
 .app {
-  height: 40vh;
-  background-color: lightsalmon;
+  header {
+    background-color: rgb(227, 232, 238);
+    padding: 5vh 5vw;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    // Top border
+    // border-top: 5px solid lightslategray;
 
-  // padding: 80px;
-  // padding: 10vh 5vw;
-  padding: calc(5px + 2vh) calc(5px + 2vw);
-}
+    // dynamic border
+    border-top: 0.3333vw solid lightslategray;
 
-p {
-  margin-bottom: 3vh;
+    // Taking it one step further => To make sure it does not get very small on mobile devices
+    border-top: calc(2px + 0.186vw) solid lightslategray;
+
+    nav {
+      a {
+        text-decoration: none;
+        color: #444;
+        margin: 0 2vw;
+      }
+    }
+  }
 }

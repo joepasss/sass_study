@@ -1,11 +1,15 @@
 function App() {
   return (
     <div className='app'>
-      <h1>Fitness Matters</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ad eius
-        fugit maxime obcaecati praesentium pariatur nobis. Incidunt
-      </p>
+      <header>
+        <nav>
+          <a href='#'>Link 1</a>
+          <a href='#'>Link 2</a>
+          <a href='#'>Link 3</a>
+          <a href='#'>Link 4</a>
+          <a href='#'>Link 5</a>
+        </nav>
+      </header>
     </div>
   );
 }
