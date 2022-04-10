@@ -3,10 +3,30 @@
   padding: 0;
 }
 
-img:first-of-type {
-  width: 50vh;
+body {
+  display: flex;
+  justify-content: center;
 }
 
-img:last-of-type {
-  width: 50vmax;
+// root => html => replace px with rem
+:root {
+  font-size: 10px;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  // font-size: 3vw;
+
+  // For smaller screen sizes
+  // font-size: calc(14px + 2vw);
+
+  font-size: calc(1.4rem + 2vw); // root 10 px = 1rem is 10px
+}
+
+// For larger screens
+@media screen and (min-height: 1500px) {
+  h1 {
+    font-size: 45px;
+  }
 }
