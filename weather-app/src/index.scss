@@ -23,16 +23,6 @@ p {
   margin: 0.5rem 0;
 }
 
-// icons
-.icons {
-  font-size: 5rem;
-}
-
-// superscript elemets
-sup {
-  font-size: 0.8rem;
-}
-
 ::selection {
   color: #fcc006;
   background-color: #ff7052;
@@ -43,14 +33,6 @@ sup {
 // section => container of them all
 section#weather {
   margin: 2rem auto 0;
-}
-
-// main heading
-h1 {
-  text-align: center;
-  font-size: 6rem;
-  letter-spacing: 0.4rem;
-  font-weight: 300;
 }
 
 // weather info -- temp container
@@ -66,4 +48,9 @@ div.weather__info {
   align-items: center;
 
   margin: 5rem 0;
+}
+
+div.weather__temp {
+  display: flex;
+  justify-content: space-evenly;
 }
