@@ -1,11 +1,3 @@
-import {
-  FaSun,
-  FaCloudSun,
-  FaWind,
-  FaCloudSunRain,
-  FaCloudShowersHeavy,
-  FaCloudMeatball,
-} from 'react-icons/fa';
 import Header from './components/header/Header';
 import Weather_container from './components/share/weather_container/Weather_container';
 import WeatherInfo from './components/weather_info/WeatherInfo';
@@ -18,7 +10,6 @@ function App() {
         {/* Weather info */}
         <div className='weather__info__temp'>
           <WeatherInfo />
-
           {/* Weather temp */}
           <div className='weather__temp'>
             <Weather_container
