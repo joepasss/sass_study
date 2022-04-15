@@ -1,1 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Handlee&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  // box-sizing: content-box;
+  box-sizing: border-box;
+}
+
+#root {
+  .App {
+    div {
+      height: 200px;
+      width: 150px;
+    }
+
+    .div-1 {
+      background-color: lightpink;
+      padding: 10px;
+      border: red 5px solid;
+    }
+
+    .div-2 {
+      background-color: lightseagreen;
+    }
+  }
+}
