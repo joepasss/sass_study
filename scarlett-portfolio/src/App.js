@@ -1,4 +1,5 @@
 import SideNavbar from './components/sideNavbar/SideNavbar';
+import MainNav from './components/mainNav/MainNav';
 
 function App() {
   return (
@@ -6,6 +7,10 @@ function App() {
       <aside id='side-nav'>
         <SideNavbar />
       </aside>
+
+      <main>
+        <MainNav />
+      </main>
     </div>
   );
 }
