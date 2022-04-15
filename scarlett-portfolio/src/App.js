@@ -1,8 +1,11 @@
+import SideNavbar from './components/sideNavbar/SideNavbar';
+
 function App() {
   return (
     <div className='App'>
-      <div className='div-1'></div>
-      <div className='div-2'></div>
+      <aside id='side-nav'>
+        <SideNavbar />
+      </aside>
     </div>
   );
 }

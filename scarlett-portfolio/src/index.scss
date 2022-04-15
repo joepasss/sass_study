@@ -1,27 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Handlee&display=swap');
+@import './global.scss';
 
-* {
+// RESET
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  // box-sizing: content-box;
   box-sizing: border-box;
 }
 
 #root {
+  font-size: 62.5%;
+
   .App {
-    div {
-      height: 200px;
-      width: 150px;
-    }
+    font-family: $fontFamily;
+    line-height: $lineHeight;
 
-    .div-1 {
-      background-color: lightpink;
-      padding: 10px;
-      border: red 5px solid;
-    }
+    display: flex;
 
-    .div-2 {
-      background-color: lightseagreen;
+    aside#side-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      height: 100vh;
     }
   }
 }

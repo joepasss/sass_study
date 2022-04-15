@@ -1,0 +1,47 @@
+@import '../../global.scss';
+
+div.side-nav__content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background-color: $primary-color;
+
+  div.side-nav__content--logo,
+  img {
+    width: calc(3vw + 3vh);
+
+    object-fit: cover;
+  }
+
+  ul.side-nav__content--social {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      .icon {
+        // 20px => 2rem => 1rem + (10/1500) * 100
+        // if viewport width 1500px 2rem
+        font-size: calc(1rem + 0.66667vw);
+        color: white;
+
+        // padding-bottom: calc(2rem + 0.6667vw);
+        margin-bottom: calc(2rem + 0.6667vw);
+
+        transition: color 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        &:hover,
+        :active {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
