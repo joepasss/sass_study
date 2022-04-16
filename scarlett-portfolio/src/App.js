@@ -1,6 +1,7 @@
 import './styles/app.scss';
 
 import SideNav from './components/sideNav/SideNav.jsx';
+import MainNav from './components/mainNav/MainNav';
 
 function App() {
   return (
@@ -8,6 +9,10 @@ function App() {
       <aside id='side-nav'>
         <SideNav />
       </aside>
+
+      <main>
+        <MainNav />
+      </main>
     </div>
   );
 }

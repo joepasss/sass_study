@@ -1,5 +1,18 @@
 @import './global.scss';
 
+// Global Styling
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+// main styling
 div.App {
   font-size: 62.5%;
 
@@ -13,5 +26,9 @@ div.App {
     top: 0;
     left: 0;
     height: 100vh;
+  }
+
+  main {
+    flex: 1;
   }
 }

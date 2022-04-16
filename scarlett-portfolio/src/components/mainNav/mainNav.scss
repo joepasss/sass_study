@@ -1,0 +1,30 @@
+@import '../../styles/global.scss';
+
+header#header {
+  background-color: $secondary-color;
+  height: calc(3vw + 3vh);
+  z-index: 2;
+
+  nav.main-nav {
+    height: 100%;
+
+    ul.main-links {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      li {
+        padding-right: 3vw;
+
+        a {
+          position: relative;
+          padding: 0.2rem 0.6rem;
+          font-size: calc(1rem + 0.66667vw);
+        }
+      }
+    }
+  }
+}
