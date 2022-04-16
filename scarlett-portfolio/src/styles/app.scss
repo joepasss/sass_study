@@ -1,0 +1,17 @@
+@import './global.scss';
+
+div.App {
+  font-size: 62.5%;
+
+  font-family: $fontFamily;
+  line-height: $lineHeight;
+
+  display: flex;
+
+  aside#side-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+}
