@@ -4,15 +4,9 @@ import { useState } from 'react';
 
 function MainNav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [fade, setFade] = useState(false);
 
   const onClick = () => {
     setIsOpen(!isOpen);
-    if (!fade) {
-      setTimeout(setFade(true), 5000);
-    } else {
-      setFade(false);
-    }
   };
 
   const mainNavList = [
@@ -35,7 +29,7 @@ function MainNav() {
 
         <ul className='header__main--links'>
           {mainNavList.map((text, idx) => (
-            <li key={idx} className={fade ? 'fade' : ''}>
+            <li key={idx} className={isOpen ? 'fade' : ''}>
               <a href='#!'>{text}</a>
             </li>
           ))}

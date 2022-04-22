@@ -1,5 +1,6 @@
 import SideNavbar from './components/sideNavbar/SideNavbar';
 import MainNav from './components/mainNav/MainNav';
+import Hero from './components/hero/Hero';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
 
       <main>
         <MainNav />
+        <Hero />
       </main>
     </div>
   );
