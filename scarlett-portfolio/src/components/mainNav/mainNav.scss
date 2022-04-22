@@ -5,7 +5,7 @@ header#header {
   height: calc(3vw + 3vh);
   z-index: 2;
 
-  nav.header__main-nav {
+  nav#header__main-nav {
     height: 100%;
 
     ul.header__main--links {
@@ -25,7 +25,7 @@ header#header {
         a {
           position: relative;
           padding: 0.2rem 0.6rem;
-          font-size: calc(1rem + 0.66667vw);
+          font-size: calc(0.8rem + 0.66667vw);
         }
 
         a:link::before,
@@ -63,6 +63,111 @@ header#header {
         a:hover::after,
         a:active::after {
           transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  header#header {
+    position: absolute;
+
+    nav#header__main-nav {
+      width: 30rem;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: -30rem;
+      background-color: $secondary-color;
+      text-align: center;
+
+      div#header__main-nav--hamburger {
+        width: 4rem;
+        height: 4rem;
+        position: fixed;
+        top: 1rem;
+        right: 2rem;
+        cursor: pointer;
+        background-color: $secondary-color;
+        padding: 1rem;
+        border-radius: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .line {
+          width: 100%;
+          height: 0.3rem;
+          background-color: white;
+          border-radius: 0.2rem;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+
+      ul.header__main--links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        li {
+          margin-bottom: 4vh;
+          margin-left: 6vw;
+        }
+      }
+    }
+
+    .open {
+      left: 55%;
+
+      .line1 {
+        transform: rotateZ(-45deg) translate(-0.5rem, 0.45rem);
+      }
+
+      .line2 {
+        opacity: 0;
+      }
+
+      .line3 {
+        transform: rotateZ(45deg) translate(-0.5rem, -0.45rem);
+      }
+
+      ul.header__main--links {
+        li {
+          opacity: 0;
+
+          &:nth-child(1) {
+            transition: all 0.5s ease-in-out 0.2s;
+          }
+        }
+
+        li:nth-child(1) {
+          transition: all 0.5s ease-in-out 0.2s;
+        }
+
+        li:nth-child(2) {
+          transition: all 0.5s ease-in-out 0.4s;
+        }
+
+        li:nth-child(3) {
+          transition: all 0.5s ease-in-out 0.6s;
+        }
+
+        li:nth-child(4) {
+          transition: all 0.5s ease-in-out 0.8s;
+        }
+
+        li:nth-child(5) {
+          transition: all 0.5s ease-in-out 1s;
+        }
+
+        li:nth-child(6) {
+          transition: all 0.5s ease-in-out 1.2s;
+        }
+
+        li.fade {
+          opacity: 1;
         }
       }
     }
