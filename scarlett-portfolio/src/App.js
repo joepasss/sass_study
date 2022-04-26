@@ -2,6 +2,7 @@ import './styles/app.scss';
 
 import SideNav from './components/sideNav/SideNav.jsx';
 import MainNav from './components/mainNav/MainNav';
+import Hero from './components/hero/Hero';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
       <main>
         <MainNav />
+        <Hero />
       </main>
     </div>
   );
