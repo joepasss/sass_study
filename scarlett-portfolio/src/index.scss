@@ -44,3 +44,12 @@ a:link,
     }
   }
 }
+
+@media screen and(min-width: 1510px) {
+  #root {
+    div.App {
+      width: 1510px;
+      margin: 0 auto;
+    }
+  }
+}
