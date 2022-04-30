@@ -85,6 +85,10 @@ section#showcase {
   section#showcase {
     background-position: 100%;
     align-items: flex-end;
+
+    a.content-link {
+      display: none;
+    }
   }
 }
 
