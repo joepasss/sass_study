@@ -1,10 +1,11 @@
 import './styles/app.scss';
 
-import SideNav from './components/sideNav/SideNav.jsx';
-import MainNav from './components/mainNav/MainNav';
-import Hero from './components/hero/Hero';
-import Work from './components/work/Work';
-import Aboutme from './components/aboutme/Aboutme';
+import SideNav from './sections/sideNav/SideNav';
+import MainNav from './sections/mainNav/MainNav';
+import Hero from './sections/hero/Hero';
+import Work from './sections/work/Work';
+import Aboutme from './sections/aboutme/Aboutme';
+import Services from './sections/services/Services';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Hero />
         <Work />
         <Aboutme />
+        <Services />
       </main>
     </div>
   );

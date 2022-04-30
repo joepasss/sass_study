@@ -60,6 +60,7 @@ header#header {
 
 header#header-colapse {
   position: absolute;
+  z-index: 2;
 
   nav#main-nav-colapse {
     width: 30rem;
