@@ -42,3 +42,9 @@ div.content {
     }
   }
 }
+
+@media screen and (max-width: 691px) {
+  div.content {
+    display: none;
+  }
+}
