@@ -6,6 +6,7 @@ import Hero from './sections/hero/Hero';
 import Work from './sections/work/Work';
 import Aboutme from './sections/aboutme/Aboutme';
 import Services from './sections/services/Services';
+import Skills from './sections/skills/Skills';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Work />
         <Aboutme />
         <Services />
+        <Skills />
       </main>
     </div>
   );
