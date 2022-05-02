@@ -7,6 +7,7 @@ import Work from './sections/work/Work';
 import Aboutme from './sections/aboutme/Aboutme';
 import Services from './sections/services/Services';
 import Skills from './sections/skills/Skills';
+import Testimonials from './sections/testimonials/Testimonials';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Aboutme />
         <Services />
         <Skills />
+        <Testimonials />
       </main>
     </div>
   );

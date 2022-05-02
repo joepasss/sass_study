@@ -15,6 +15,7 @@ a:visited {
 // main styling
 div.App {
   font-size: 62.5%;
+  width: 100vw;
 
   font-family: $fontFamily;
   line-height: $lineHeight;
@@ -33,13 +34,13 @@ div.App {
   }
 }
 
-@media screen and(min-width: 1510px) {
+@media screen and(min-width: 1610px) {
   #root {
     background-color: rgb(206, 206, 206);
   }
 
   div.App {
-    width: 1510px;
+    width: 1610px;
     margin: 0 auto;
   }
 }
