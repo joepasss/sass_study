@@ -1,0 +1,43 @@
+@import '../../styles/global.scss';
+
+section#contact {
+  height: 100vh;
+  background-image: url('../../assets/img/full-bg-03.jpg');
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  .contact-form {
+    flex-basis: 40rem;
+
+    display: flex;
+    flex-direction: column;
+    background-color: $tertiary-color-m;
+
+    input,
+    textarea {
+      color: white;
+      font-family: 'Handlee', cursive;
+      font-size: 1.5rem;
+      background-color: transparent;
+      border: none;
+      border-bottom: 0.1rem solid $secondary-color;
+    }
+
+    textarea {
+      height: 30vh;
+    }
+
+    input[type='submit'] {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  section#contact {
+    background-position: 10% 5%;
+  }
+}
