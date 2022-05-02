@@ -1,0 +1,76 @@
+@import '../../styles/global.scss';
+
+section#services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding: 6rem 2rem 2rem;
+  background-color: $primary-color;
+
+  div.service {
+    padding: 4rem;
+    margin: 0 2rem 4rem;
+    flex-basis: 25rem;
+    flex-grow: 1;
+    background-color: $secondary-color;
+    border-bottom: 0.5rem solid $secondary-color;
+    border-left: 0.5rem solid $secondary-color;
+    border-right: 0.5rem solid $secondary-color;
+
+    position: relative;
+
+    z-index: 1;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $primary-color;
+      transform: scaleY(0);
+      transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+      transform-origin: top;
+
+      z-index: -1;
+    }
+
+    &:hover::after,
+    &:active::after {
+      transform: scaleY(1);
+    }
+
+    .icon,
+    h3.service-title {
+      margin-bottom: 2rem;
+    }
+
+    .icon {
+      font-size: 3rem;
+      color: white;
+    }
+
+    h3.service-title {
+      font-size: calc(1.3rem + 0.6667vw);
+    }
+
+    p.service-para {
+      font-family: 'Handlee', cursive;
+      font-size: calc(0.8rem + 0.6667vw);
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  section#services {
+    padding: 6rem 3rem 2rem;
+
+    div.service {
+      padding: calc(1rem + 2vw);
+      margin: 0 0 calc(1rem + 2vw);
+    }
+  }
+}

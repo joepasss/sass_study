@@ -1,0 +1,46 @@
+@import './global.scss';
+
+// Global Styling
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+// main styling
+div.App {
+  font-size: 62.5%;
+  width: 100vw;
+
+  font-family: $fontFamily;
+  line-height: $lineHeight;
+
+  display: flex;
+
+  aside#side-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  main {
+    flex: 1;
+  }
+}
+
+@media screen and(min-width: 1610px) {
+  #root {
+    background-color: rgb(206, 206, 206);
+  }
+
+  div.App {
+    width: 1610px;
+    margin: 0 auto;
+  }
+}

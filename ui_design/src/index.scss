@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
   background: #014bcb;
   height: 100vh;
   color: white;
+<<<<<<< HEAD
   font-family: Arial, Helvetica, sans-serif;
 
   display: flex;
@@ -35,17 +38,53 @@ main {
     h3 {
       margin: 0;
       font-size: 0.9rem;
+=======
+  font-family: 'Quicksand' Arial, Helvetica, sans-serif;
+  display: flex;
+
+  aside {
+    background: #1d3154;
+    width: 5%;
+    height: 100vh;
+  }
+
+  main {
+    width: 30%;
+    padding: 1rem;
+
+    h1 {
+      margin: 2rem 2rem 2rem 0;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+    .content {
+      background: #0044b9;
+      margin-left: 2rem;
+      border-radius: 0.8rem;
+      padding: 1.5rem;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      font-size: 1.3rem;
+>>>>>>> main
       color: #ff69f5;
     }
 
     ul {
+<<<<<<< HEAD
       list-style-type: none;
+=======
+      list-style: none;
+>>>>>>> main
       padding: 0;
       margin-bottom: 0;
 
       li {
         margin-bottom: 0.5rem;
         font-size: 0.8rem;
+<<<<<<< HEAD
       }
     }
   }
@@ -74,6 +113,10 @@ main {
         padding: 0.2rem;
         display: flex;
 
+=======
+        padding: 0.2rem;
+        display: flex;
+>>>>>>> main
         justify-content: space-between;
 
         span {

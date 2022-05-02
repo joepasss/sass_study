@@ -4,7 +4,11 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
+<<<<<<< HEAD
     "@testing-library/react": "^13.0.1",
+=======
+    "@testing-library/react": "^13.1.1",
+>>>>>>> main
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

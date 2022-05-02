@@ -23,6 +23,7 @@ p {
   margin: 0.5rem 0;
 }
 
+<<<<<<< HEAD
 // icons
 .icons {
   font-size: 5rem;
@@ -33,6 +34,8 @@ sup {
   font-size: 0.8rem;
 }
 
+=======
+>>>>>>> main
 ::selection {
   color: #fcc006;
   background-color: #ff7052;
@@ -45,6 +48,7 @@ section#weather {
   margin: 2rem auto 0;
 }
 
+<<<<<<< HEAD
 // main heading
 h1 {
   text-align: center;
@@ -53,6 +57,8 @@ h1 {
   font-weight: 300;
 }
 
+=======
+>>>>>>> main
 // weather info -- temp container
 div.weather__info__temp {
   padding: 4rem;
@@ -68,11 +74,15 @@ div.weather__info {
   margin: 5rem 0;
 }
 
+<<<<<<< HEAD
 // Weather Temp container
+=======
+>>>>>>> main
 div.weather__temp {
   display: flex;
   justify-content: space-evenly;
 }
+<<<<<<< HEAD
 
 // 900 px or wider
 @media screen and (min-width: 900px) {
@@ -130,3 +140,5 @@ div.weather__temp {
     }
   }
 }
+=======
+>>>>>>> main
