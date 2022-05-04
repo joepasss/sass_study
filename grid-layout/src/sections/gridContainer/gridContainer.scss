@@ -5,46 +5,25 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-columns: 150px 150px 150px 150px;
-  grid-template-rows: 150px 150px 150px;
+  gap: 25px;
 
-  // Grid Column Gap Properties
-  // Propertiy values : (length, percentages, viewport units)
+  // Repeat Function
+  // value = repeat(times, values)
+  // grid-template-columns: repeat(4, 150px); // 150px four times repeat
+  grid-template-rows: repeat(3, 150px); // 150px three times repeat
 
-  // Old Syntax -- highest support
-  // grid-column-gap: 10px; // Gutter Gap
-  // grid-column-gap: 2.5rem;
-  // grid-column-gap: 2vw;
-  // grid-column-gap: 5%;
+  // (Property value) fr Unit (Fractional Unit)
+  // how many fraction of this container has? == grid takes all available space in display: grid(grid container)
+  // Useage = repeat(#rows/cols, track-size)
+  grid-template-columns: repeat(3, 150px) 1fr; // last child get all available space
+  // grid-template-columns: repeat(3, 150px) 0.5fr; // last child get half of available space
+  // if container has no content it gets calculated space
+  // if no available space fr unit gets no space
+  // if no available space and it has content it can be zero space (it makes horizontal scrollbar)
 
-  // Standard Syntax
-  // column-gap: 10px;
-  // column-gap: 2.5rem;
-  // column-gap: 2vw;
-  // column-gap: 5%;
-
-  // Grid Row Gap Properties
-  // Old Syntax
-  // grid-row-gap: 10px;
-  // grid-row-gap: 2.5rem;
-  // grid-row-gap: 2vw;
-  // grid-row-gap: 5%;
-
-  // Standard Syntax
-  // row-gap: 10px;
-  // row-gap: 2.5rem;
-  // row-gap: 2vw;
-  // row-gap: 5%;
-
-  // Shorthand for grid-column gap and grid row gap - grid gap properties
-  // Property Values: <grid-row-gap> <grid-column-gap>
-  // Old Syntax
-  // grid-gap: 15px 25px;
-  // grid-gap: 10px;
-
-  // Standard Syntax
-  // gap: 2rem 3rem;
-  // gap: 10%;
+  // grid-template-columns: 1fr 2fr 2fr 1fr;
+  // grid-template-columns: 1fr 2fr 3fr 4fr;
+  // grid-template-columns: 150px 1fr 50% 1fr; // 50% property ignores grid gap property
 
   div.item {
     background-color: #fcc006;
