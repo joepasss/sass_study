@@ -5,12 +5,46 @@ section.grid-container {
 
   display: grid;
 
-  // Grid Container Properties
-  // Grid Template Rows Properties
-  grid-template-rows: 150px 150px 250px 50px; // track size
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px;
 
-  // Grid Template Columns Properties
-  grid-template-columns: 150px 150px;
+  // Grid Column Gap Properties
+  // Propertiy values : (length, percentages, viewport units)
+
+  // Old Syntax -- highest support
+  // grid-column-gap: 10px; // Gutter Gap
+  // grid-column-gap: 2.5rem;
+  // grid-column-gap: 2vw;
+  // grid-column-gap: 5%;
+
+  // Standard Syntax
+  // column-gap: 10px;
+  // column-gap: 2.5rem;
+  // column-gap: 2vw;
+  // column-gap: 5%;
+
+  // Grid Row Gap Properties
+  // Old Syntax
+  // grid-row-gap: 10px;
+  // grid-row-gap: 2.5rem;
+  // grid-row-gap: 2vw;
+  // grid-row-gap: 5%;
+
+  // Standard Syntax
+  // row-gap: 10px;
+  // row-gap: 2.5rem;
+  // row-gap: 2vw;
+  // row-gap: 5%;
+
+  // Shorthand for grid-column gap and grid row gap - grid gap properties
+  // Property Values: <grid-row-gap> <grid-column-gap>
+  // Old Syntax
+  // grid-gap: 15px 25px;
+  // grid-gap: 10px;
+
+  // Standard Syntax
+  // gap: 2rem 3rem;
+  // gap: 10%;
 
   div.item {
     background-color: #fcc006;
