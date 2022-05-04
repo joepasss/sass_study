@@ -1,0 +1,18 @@
+@import '../../styles/global.scss';
+
+section.grid-container {
+  background-color: #ff7052;
+
+  display: grid;
+
+  /****       Grid Container Properties       ****/
+  // Grid Template Rows Properties
+  grid-template-rows: 150px 150px 250px 50px;
+
+  // Grid Template Columns Properties
+  grid-template-columns: 150px 150px;
+
+  div.item {
+    background-color: #fcc006;
+  }
+}
