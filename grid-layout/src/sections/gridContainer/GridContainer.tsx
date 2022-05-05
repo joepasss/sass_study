@@ -14,6 +14,8 @@ export const GridContainer: FC = () => {
       <div className='item item8'>item-8</div>
       <div className='item item9'>item-9</div>
       <div className='item item10'>item-10</div>
+      <div className='item item10'>item-11</div>
+      <div className='item item10'>item-12</div>
     </section>
   );
 };

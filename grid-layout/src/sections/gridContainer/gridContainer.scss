@@ -5,26 +5,19 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-rows: 150px 150px 250px 50px;
-  grid-template-columns: 150px 150px;
+  /****         Repeat Function         ****/
+  // value = repeat(time, value)
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(3, 150px);
 
-  /****       Grid Column / Row Gap Properties      ****/
-  // Old Syntax
-  grid-column-gap: 10%;
-  grid-row-gap: 10%;
+  /****         The fr Unit         ****/
+  grid-template-columns: repeat(3, 150px) 1fr;
+  // 1fr == gets all available space
+  // 0.5fr == gets half of available space
 
-  // Standard Syntax
-  column-gap: 10%;
-  row-gap: 10%;
-
-  /*  ShortHand for grid-column gap and grid-row-gap  */
-  // Old Syntax
-  grid-gap: 15px 2rem; // column gap = 15px, row gap = 2rem
-  grid-gap: 10px; // column gap & row gap == 10px
-
-  // Standard Syntax
-  gap: 10px 5rem;
-  gap: 2rem;
+  /****         % property        ****/
+  grid-template-columns: 1fr 1fr 50% 2fr;
+  // % property value is ignores gap value
 
   div.item {
     background-color: #fcc006;
