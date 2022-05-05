@@ -5,21 +5,34 @@ section.grid-container {
 
   display: grid;
 
-  /****         Repeat Function         ****/
-  // value = repeat(time, value)
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(3, 150px);
-
-  /****         The fr Unit         ****/
-  grid-template-columns: repeat(3, 150px) 1fr;
-  // 1fr == gets all available space
-  // 0.5fr == gets half of available space
-
-  /****         % property        ****/
-  grid-template-columns: 1fr 1fr 50% 2fr;
-  // % property value is ignores gap value
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
 
   div.item {
-    background-color: #fcc006;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+  }
+
+  div.item-1 {
+    background-color: chartreuse;
+
+    // Change the horizontal Postion
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    // Change the vertial Position
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    // Shorthand
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+    // Shorthand-Shorthand
+    // grid-area: Row Start / Column Start / Row End / Column End
+    grid-area: 1 / 2 / 2 / 3;
   }
 }
