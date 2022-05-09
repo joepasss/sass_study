@@ -5,8 +5,12 @@ section.grid-container {
 
   display: grid;
   gap: 25px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 150px);
+
+  // No Repeat function is involved
+  grid-template-columns: [col-start-1] 150px [col-end-1 col-start-2] 150px [col-end-2 col-start-3] 150px [col-end-3 col-start-4] 150px [col-end-4 col-end];
+
+  // Use Repeat function
+  grid-template-rows: repeat(2, [row-start] 150px [row-end]);
 
   div.item {
     font-size: 3rem;
@@ -21,11 +25,7 @@ section.grid-container {
     background-color: chartreuse;
 
     // Spanning the item
-    grid-row: 2 / 3;
-    grid-column: 2 / 4;
-
-    grid-column: 1 / span 3;
-
-    grid-column: 1 / -1;
+    grid-column: col-start-1 / col-end;
+    grid-row: row-start 2 / row-end 2;
   }
 }
