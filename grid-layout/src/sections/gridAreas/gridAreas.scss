@@ -1,0 +1,64 @@
+@import '../../styles/global.scss';
+
+.grid-container {
+  background-color: #ff7052;
+  display: grid;
+  gap: 25px;
+
+  grid-template-areas:
+    'header header header header header header'
+    'sec-1 sec-1 sec-2 sec-2 sec-3 sec-3'
+    '. sec-4 sec-4 sec-4 sec-4 .'
+    'sec-5 sec-5 sec-5 sec-6 sec-6 sec-6'
+    'footer footer footer footer footer footer';
+
+  header,
+  section,
+  footer {
+    background-color: #fcc006;
+    font-size: 20px;
+    text-align: center;
+    line-height: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .header {
+    background-color: chartreuse;
+    grid-area: header;
+  }
+
+  .section-1 {
+    background-color: darkseagreen;
+    grid-area: sec-1;
+  }
+
+  .section-2 {
+    background-color: chocolate;
+    grid-area: sec-2;
+  }
+
+  .section-3 {
+    background-color: cornflowerblue;
+    grid-area: sec-3;
+  }
+
+  .section-4 {
+    background-color: olivedrab;
+    grid-area: sec-4;
+  }
+
+  .section-5 {
+    background-color: darkkhaki;
+    grid-area: sec-5;
+  }
+
+  .section-6 {
+    background-color: dimgray;
+    grid-area: sec-6;
+  }
+
+  .footer {
+    background-color: darkorchid;
+    grid-area: footer;
+  }
+}
