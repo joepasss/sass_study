@@ -4,35 +4,28 @@ section.grid-container {
   background-color: #ff7052;
 
   display: grid;
-
+  gap: 25px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-rows: repeat(2, 150px);
 
   div.item {
     font-size: 3rem;
     text-align: center;
-    line-height: 200px;
+    line-height: 150px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
+    background-color: rgb(209, 209, 209);
   }
 
   div.item-1 {
     background-color: chartreuse;
 
-    // Change the horizontal Postion
-    grid-row-start: 2;
-    grid-row-end: 3;
+    // Spanning the item
+    grid-row: 2 / 3;
+    grid-column: 2 / 4;
 
-    // Change the vertial Position
-    grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column: 1 / span 3;
 
-    // Shorthand
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-
-    // Shorthand-Shorthand
-    // grid-area: Row Start / Column Start / Row End / Column End
-    grid-area: 1 / 2 / 2 / 3;
+    grid-column: 1 / -1;
   }
 }
