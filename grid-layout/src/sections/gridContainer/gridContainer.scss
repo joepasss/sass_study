@@ -2,36 +2,27 @@
 
 section.grid-container {
   background-color: #ff7052;
-  height: 100vh;
 
   display: grid;
 
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: repeat(2, 150px);
 
-  // Justify content property
-  // start end center stretch(default) space-around space-between space-evenly
-  // justify-content: end;
-  // justify-content: center;
-  // justify-content: space-around;
-  // justify-content: space-between;
-  // justify-content: space-evenly;
+  gap: 25px;
 
-  // Align content proprety
-  // align-content: end;
-  // align-content: center;
-  // align-content: space-around;
-  // align-content: space-between;
-  // align-content: space-evenly;
+  // Grid Auto Rows Property
+  // Property values: <track-size> (length, fr, viewport ...)
+  // grid-auto-rows: 150px;
 
-  // Place content property
-  // value <align-content> <justify-content>
-  // place-content: center center;
-  // place-content: end center;
-  // place-content: center;
+  // Grid Auto Flow Property
+  // Property values: row (default), column
+  grid-auto-flow: column;
+
+  // grid-auto-columns
+  grid-auto-columns: 150px;
 
   div.item {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
@@ -67,5 +58,22 @@ section.grid-container {
 
   div.item-8 {
     background-color: yellow;
+  }
+
+  div.item-9 {
+    background-color: dodgerblue;
+  }
+
+  div.item-10 {
+    background-color: forestgreen;
+  }
+
+  div.item-11 {
+    background-color: fuchsia;
+  }
+
+  div.item-12 {
+    background-color: indigo;
+    color: white;
   }
 }
