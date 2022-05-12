@@ -2,29 +2,33 @@
 
 section.grid-container {
   background-color: #ff7052;
+  height: 100vh;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(2, 150px);
 
-  gap: 25px;
+  // Justify content property
+  // start end center stretch(default) space-around space-between space-evenly
+  // justify-content: end;
+  // justify-content: center;
+  // justify-content: space-around;
+  // justify-content: space-between;
+  // justify-content: space-evenly;
 
-  // justify-items: stretch; // default
-  // justify-items: start;
-  // justify-items: end;
-  // justify-items: center;
+  // Align content proprety
+  // align-content: end;
+  // align-content: center;
+  // align-content: space-around;
+  // align-content: space-between;
+  // align-content: space-evenly;
 
-  // align-items: stretch; // default
-  // align-items: start;
-  // align-items: end;
-  // align-items: center;
-
-  // Place Items Property (Shorthand for align-items and justify items
-  // value = <align-items> <justify-items>
-  // place-items: center center;
-  // place-items: start center;
-  place-items: start start;
+  // Place content property
+  // value <align-content> <justify-content>
+  // place-content: center center;
+  // place-content: end center;
+  // place-content: center;
 
   div.item {
     font-size: 30px;
