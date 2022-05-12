@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import { GridTemplateArea } from './sections/gridTemplateArea/GridTemplateArea';
+import { GridContainer } from './sections/gridContainer/GridContainer';
 
 export const App: FC = () => {
   return (
     <div className='App'>
-      <GridTemplateArea />
+      <GridContainer />
     </div>
   );
 };
