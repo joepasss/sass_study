@@ -13,12 +13,6 @@ export const GridContainer: FC = () => {
       <div className='item item-6'>item-6</div>
       <div className='item item-7'>item-7</div>
       <div className='item item-8'>item-8</div>
-
-      {/* div*4.item.item-$@9{Univited-$@9} */}
-      <div className='item item-9'>Univited-9</div>
-      <div className='item item-10'>Univited-10</div>
-      <div className='item item-11'>Univited-11</div>
-      <div className='item item-12'>Univited-12</div>
     </section>
   );
 };

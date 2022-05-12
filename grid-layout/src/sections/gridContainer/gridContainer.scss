@@ -5,24 +5,13 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-columns: repeat(4, 150px);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 150px);
 
   gap: 25px;
 
-  // Grid Auto Rows Property
-  // Property values: <track-size> (length, fr, viewport ...)
-  // grid-auto-rows: 150px;
-
-  // Grid Auto Flow Property
-  // Property values: row (default), column
-  grid-auto-flow: column;
-
-  // grid-auto-columns
-  grid-auto-columns: 150px;
-
   div.item {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
@@ -30,6 +19,23 @@ section.grid-container {
 
   div.item-1 {
     background-color: chartreuse;
+
+    // Justify Self Property
+    // Property Value: stretch (default) | start | end | center
+    // justify-self: start;
+    // justify-self: end;
+    // justify-self: center;
+
+    // Aign self Property
+    // align-self: center;
+    // align-self: end;
+
+    // Place self Property
+    // Shorthand property for align-self & justify-self
+    // value: <align-self> <justify-self>
+    // place-self: center;
+    // place-self: start end;
+    // place-self: end center;
   }
 
   div.item-2 {
