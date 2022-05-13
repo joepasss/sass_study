@@ -6,27 +6,16 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(2, 150px);
+
+  /**** GRID AUTO ROWS, COLUMS, FLOW PROPERTY ****/
+  grid-auto-rows: 250px;
+  grid-auto-flow: column;
+  grid-auto-flow: row; // default
+  grid-auto-columns: 200px;
 
   gap: 25px;
-
-  /**** Justify Content & Align Content & Place Content ****/
-  justify-content: stretch; // default
-  justify-content: start;
-  justify-content: end;
-  justify-content: center;
-
-  align-content: stretch; // default
-  align-content: start;
-  align-content: end;
-  align-content: center;
-
-  // Value: <align-content> <justify-content>
-  place-content: start start;
-  place-content: start;
-  place-content: end start;
-  place-content: center;
 
   div.item {
     font-size: 1.5rem;
