@@ -2,33 +2,34 @@
 
 section.grid-container {
   background-color: #ff7052;
+  height: 100vh;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(2, 250px);
 
   gap: 25px;
 
-  /**** Justify Items & Align Items & Place Items ****/
-  justify-items: stretch; // default
-  justify-items: start;
-  justify-items: end;
-  justify-items: center;
+  /**** Justify Content & Align Content & Place Content ****/
+  justify-content: stretch; // default
+  justify-content: start;
+  justify-content: end;
+  justify-content: center;
 
-  align-items: stretch; // default
-  align-items: start;
-  align-items: end;
-  align-items: center;
+  align-content: stretch; // default
+  align-content: start;
+  align-content: end;
+  align-content: center;
 
-  // Value: <align-items> <justify-items>
-  place-items: start start;
-  place-items: start;
-  place-items: center;
-  place-items: end start;
+  // Value: <align-content> <justify-content>
+  place-content: start start;
+  place-content: start;
+  place-content: end start;
+  place-content: center;
 
   div.item {
-    font-size: 3rem;
+    font-size: 1.5rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
