@@ -4,18 +4,32 @@ section.grid-container {
   background-color: #ff7052;
 
   display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+
   gap: 25px;
 
-  // No Repeat function is involved
-  grid-template-columns: [col-start-1] 150px [col-end-1 col-start-2] 150px [col-end-2 col-start-3] 150px [col-end-3 col-start-4] 150px [col-end-4 col-end];
+  /**** Justify Items & Align Items & Place Items ****/
+  justify-items: stretch; // default
+  justify-items: start;
+  justify-items: end;
+  justify-items: center;
 
-  // Use Repeat function
-  grid-template-rows: repeat(2, [row-start] 150px [row-end]);
+  align-items: stretch; // default
+  align-items: start;
+  align-items: end;
+  align-items: center;
+
+  // Value: <align-items> <justify-items>
+  place-items: start start;
+  place-items: start;
+  place-items: center;
+  place-items: end start;
 
   div.item {
     font-size: 3rem;
     text-align: center;
-    line-height: 150px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
     background-color: rgb(209, 209, 209);
@@ -23,9 +37,5 @@ section.grid-container {
 
   div.item-1 {
     background-color: chartreuse;
-
-    // Spanning the item
-    grid-column: col-start-1 / col-end;
-    grid-row: row-start 2 / row-end 2;
   }
 }
