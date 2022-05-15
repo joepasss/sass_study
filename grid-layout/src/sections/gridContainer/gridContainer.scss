@@ -5,10 +5,22 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 150px);
+  // Max Content
+  // grid-template-rows: repeat(2, 150px);
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-columns: 1fr 1fr max-content 1fr;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-template-rows: repeat(2, min-content);
+  // grid-template-rows: repeat(2, max-content);
 
-  gap: 25px;
+  // minmax function
+  // grid-template-columns: 1fr 1fr min-content 1fr;
+  // grid-template-rows: repeat(2, minmax(100px, min-content));
+  grid-template-rows: repeat(2, minmax(100px, 200px));
+
+  grid-template-columns: minmax(250px, 500px) repeat(3, 1fr);
+
+  // height: 100vh;
 
   div.item {
     font-size: 30px;
@@ -19,23 +31,6 @@ section.grid-container {
 
   div.item-1 {
     background-color: chartreuse;
-
-    // Justify Self Property
-    // Property Value: stretch (default) | start | end | center
-    // justify-self: start;
-    // justify-self: end;
-    // justify-self: center;
-
-    // Aign self Property
-    // align-self: center;
-    // align-self: end;
-
-    // Place self Property
-    // Shorthand property for align-self & justify-self
-    // value: <align-self> <justify-self>
-    // place-self: center;
-    // place-self: start end;
-    // place-self: end center;
   }
 
   div.item-2 {
