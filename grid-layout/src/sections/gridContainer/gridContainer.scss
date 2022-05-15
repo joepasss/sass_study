@@ -5,22 +5,23 @@ section.grid-container {
 
   display: grid;
 
-  // Max Content
-  // grid-template-rows: repeat(2, 150px);
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-template-columns: 1fr 1fr max-content 1fr;
-  // grid-template-columns: 1fr 1fr 1fr 1fr;
-  // grid-template-rows: repeat(2, min-content);
-  // grid-template-rows: repeat(2, max-content);
+  grid-template-rows: repeat(2, minmax(150px, min-content));
 
-  // minmax function
-  // grid-template-columns: 1fr 1fr min-content 1fr;
-  // grid-template-rows: repeat(2, minmax(100px, min-content));
-  grid-template-rows: repeat(2, minmax(100px, 200px));
+  // Auto Fill Property Value
+  // width: 1500px;
+  // grid-template-columns: repeat(4, 150px);
+  // grid-template-columns: repeat(auto-fill, 150px);
 
-  grid-template-columns: minmax(250px, 500px) repeat(3, 1fr);
+  // Aufo fit
+  // grid-template-columns: repeat(auto-fit, 150px);
+  // Do not set the width of coulumn to the fr unit when working with auto-fit
+  // grid-template-columns: repeat(auto-fit, 1fr);
 
-  // height: 100vh;
+  // use minmax function
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  grid-auto-rows: minmax(150px, min-content);
 
   div.item {
     font-size: 30px;
