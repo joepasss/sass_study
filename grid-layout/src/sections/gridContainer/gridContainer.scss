@@ -9,11 +9,12 @@ section.grid-container {
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: repeat(2, 150px);
 
-  /**** GRID AUTO ROWS, COLUMS, FLOW PROPERTY ****/
-  grid-auto-rows: 250px;
-  grid-auto-flow: column;
-  grid-auto-flow: row; // default
-  grid-auto-columns: 200px;
+  /**** Max Content, Min Content ****/
+  grid-template-rows: repeat(2, min-content);
+  grid-template-rows: repeat(2, max-content);
+
+  /**** minmax function ****/
+  grid-template-rows: repeat(2, minmax(100px, 200px));
 
   gap: 25px;
 
