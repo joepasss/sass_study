@@ -6,15 +6,13 @@ section.grid-container {
 
   display: grid;
 
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(2, 150px);
+  grid-template-rows: repeat(2, minmax(150px, min-content));
 
-  /**** Max Content, Min Content ****/
-  grid-template-rows: repeat(2, min-content);
-  grid-template-rows: repeat(2, max-content);
+  /**** Auto Fill ****/
+  grid-template-columns: repeat(auto-fill, 150px);
 
-  /**** minmax function ****/
-  grid-template-rows: repeat(2, minmax(100px, 200px));
+  /**** Auto Fit ****/
+  grid-template-columns: repeat(auto-fit, 150px);
 
   gap: 25px;
 

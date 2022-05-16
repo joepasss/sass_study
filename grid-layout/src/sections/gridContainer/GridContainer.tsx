@@ -11,9 +11,6 @@ export const GridContainer: FC = () => {
       <div className='item item-5'>item-5</div>
       <div className='item item-6'>item-6</div>
       <div className='item item-7'>item-7</div>
-      <div className='item item-8'>
-        item-8 maxcontent maxcontent maxcontent maxcontent
-      </div>
     </section>
   );
 };
