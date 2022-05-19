@@ -1,20 +1,7 @@
 @import '../../styles/global.scss';
 
 section.grid-container {
-  background-color: #ff7052;
   height: 100vh;
-
-  display: grid;
-
-  grid-template-rows: repeat(2, minmax(150px, min-content));
-
-  /**** Auto Fill ****/
-  grid-template-columns: repeat(auto-fill, 150px);
-
-  /**** Auto Fit ****/
-  grid-template-columns: repeat(auto-fit, 150px);
-
-  gap: 25px;
 
   div.item {
     font-size: 1.5rem;
@@ -22,9 +9,5 @@ section.grid-container {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
     background-color: rgb(209, 209, 209);
-  }
-
-  div.item-1 {
-    background-color: chartreuse;
   }
 }
