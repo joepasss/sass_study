@@ -1,5 +1,4 @@
 import './gridContainer.scss';
-
 import { FC } from 'react';
 
 export const GridContainer: FC = () => {
