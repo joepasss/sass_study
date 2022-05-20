@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+// Font
+$font_TitilliumWeb: 'Titillium Web', sans-serif;
+
+// colors
+$color-primary: #730039;
+$color-primary-m-light: hsla(330, 100%, 23%, 0.55);
+$color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
+
+$color-secondary: #ffc513;
+$color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+$color-secondary-m-dark: rgba(255, 196, 19, 0.85);
+
+$color-teriary: #ff724c;
+$color-teriary-m-light: hsla(13, 100%, 65%, 0.55);
+$color-teriary-m-dark: rgba(255, 115, 76, 0.85);
+
+$color-quaternary: #f6eedf;
+$color-quaternary-m-light: hsla(39, 56%, 92%, 0.6);
+$color-quaternary-m-dark: hsla(39, 56%, 92%, 0.65);
+
+// transition duration
+$transition-duration: 0.3s;
+
+// Section Title Font-size
+$font-size-title: calc(2rem + 2vw);
+
+// Section Padding
+$padding-section: 8vh 3vw;
