@@ -1,1 +1,13 @@
 @import '../../style/global_var.scss';
+
+section#gallery-text {
+  background-color: $color-secondary;
+
+  grid-column: center-start / col-end 1;
+}
+
+section#gallery-carousel {
+  background-color: $color-primary;
+
+  grid-column: col-start 2 / container-end;
+}

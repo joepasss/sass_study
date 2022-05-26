@@ -1,1 +1,13 @@
 @import '../../style/global_var.scss';
+
+section#features-content {
+  background-color: $color-teriary;
+
+  grid-column: container-start / col-end 9;
+}
+
+section#features-text {
+  background-color: $color-primary;
+
+  grid-column: col-start 10 / center-end;
+}
