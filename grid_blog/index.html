@@ -14,7 +14,7 @@
           margin: 0;
         }
 
-        section.grid-container {
+        div.grid-container {
           height: 80vh;
           width: 80%;
           margin: 3rem auto;
@@ -22,10 +22,8 @@
 
           display: grid;
 
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(3, 100px);
-
-          grid-gap: 10% 10%;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(3, 200px);
         }
 
         div.item {
@@ -37,15 +35,20 @@
         }
       </style>
 
-      <section class="grid-container">
-        <div class="item item-1">item-1</div>
-        <div class="item item-2">item-2</div>
-        <div class="item item-3">item-3</div>
-        <div class="item item-4">item-4</div>
-        <div class="item item-5">item-5</div>
-        <div class="item item-6">item-6</div>
-        <div class="item item-7">item-7</div>
-      </section>
+      <div className="grid-container">
+        <div className="item item-1">item-1</div>
+        <div className="item item-2">item-2</div>
+        <div className="item item-3">item-3</div>
+        <div className="item item-4">item-4</div>
+        <div className="item item-5">item-5</div>
+        <div className="item item-6">item-6</div>
+        <div className="item item-7">item-7</div>
+        <div className="item item-8">item-8</div>
+        <div className="item item-9">item-9</div>
+        <div className="item item-10">item-10</div>
+        <div className="item item-11">item-11</div>
+        <div className="item item-12">item-12</div>
+      </div>
     </div>
   </body>
 </html>
