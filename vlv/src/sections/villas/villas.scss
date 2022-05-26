@@ -1,1 +1,7 @@
 @import '../../style/global_var.scss';
+
+section#villas {
+  background-color: $color-primary;
+
+  grid-column: container-start / container-end;
+}

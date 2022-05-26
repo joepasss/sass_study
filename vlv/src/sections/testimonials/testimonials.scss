@@ -1,1 +1,7 @@
 @import '../../style/global_var.scss';
+
+section#testimonials {
+  background-color: $color-secondary;
+
+  grid-column: center-start / center-end;
+}

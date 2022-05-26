@@ -1,1 +1,7 @@
 @import '../../style/global_var.scss';
+
+section#motto {
+  background-color: $color-secondary;
+
+  grid-column: container-start / container-end;
+}

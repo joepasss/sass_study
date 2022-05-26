@@ -1,1 +1,13 @@
 @import '../../style/global_var.scss';
+
+section#booking-content {
+  background-color: $color-secondary;
+
+  grid-column: center-start / col-end 6;
+}
+
+section#booking-date {
+  background-color: $color-teriary;
+
+  grid-column: col-start 7 / center-end;
+}
