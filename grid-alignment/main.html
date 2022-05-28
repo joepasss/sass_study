@@ -9,15 +9,20 @@
   <body>
     <div class="align">
       <style>
+        div.align {
+          border: 1px solid black;
+          padding: 1rem;
+        }
+
         div#grid-container {
           height: 600px;
 
           display: grid;
 
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(4, 150px);
           grid-template-rows: repeat(2, 150px);
 
-          background-color: rgb(173, 72, 72);
+          background-color: rgb(174, 174, 174);
         }
 
         div.item {
@@ -37,8 +42,10 @@
       </style>
 
       <div id="grid-container" style="
-      justify-items: stretch;
-      align-items: stretch;
+      place-items: stretch, strech;
+
+      justify-content: start;
+      align-content: start;
       ">
         <div class="item item-1">item-1</div>
         <div class="item item-2">item-2</div>
@@ -52,42 +59,46 @@
 
       <div class="selector-group">
         <div class="selecter">
-          <p>justify-items</p>
-          <select id="justify-items">
-            <option value="stretch">stretch (default)</option>
+          <p>justify-content</p>
+          <select id="justify-content">
             <option value="start">start</option>
             <option value="center">center</option>
             <option value="end">end</option>
+            <option value="space-around">space-around</option>
+            <option value="space-between">space-between</option>
+            <option value="space-evenly">space-evenly</option>
           </select>
         </div>
         
         <div class="selecter">
-          <p>align-items</p>
-          <select id="align-items">
-            <option value="stretch">stretch (default)</option>
+          <p>align-content</p>
+          <select id="align-content">
             <option value="start">start</option>
             <option value="center">center</option>
             <option value="end">end</option>
+            <option value="space-around">space-around</option>
+            <option value="space-between">space-between</option>
+            <option value="space-evenly">space-evenly</option>
           </select>
         </div>
       </div>
         
         <script>
-        var justifyItems = document.getElementById('justify-items');
-        var alignItems = document.getElementById('align-items');
+          var justifyContent = document.getElementById('justify-content');
+          var alignContent = document.getElementById('align-content');
         
 
-        justifyItems.addEventListener('change', function (evt) {
-  document.getElementById('grid-container').style.justifyItems =
-    evt.target.value;
-});
+          justifyContent.addEventListener('change', function (evt) {
+            document.getElementById('grid-container').style.justifyContent =
+            evt.target.value;
+          });
 
-alignItems.addEventListener('change', function (evt) {
-  document.getElementById('grid-container').style.alignItems = evt.target.value;
-})
+          alignContent.addEventListener('change', function (evt) {
+            document.getElementById('grid-container').style.alignContent = evt.target.value;
+          });
       </script>
     </div>
-    
+
   </body>
 </html>
 </div>

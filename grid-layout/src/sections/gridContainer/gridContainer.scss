@@ -1,16 +1,14 @@
 @import '../../styles/global.scss';
 
 section.grid-container {
-  height: 100vh;
-
+  height: 60vh;
   display: grid;
 
   grid-template-columns: repeat(4, 10%);
   grid-template-rows: repeat(2, 150px);
+  background-color: rgb(181, 181, 181);
 
-  background-color: rgb(255, 255, 255);
-
-  place-items: end start;
+  place-content: start end;
 
   div.item {
     font-size: 1.5rem;
