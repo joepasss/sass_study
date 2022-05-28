@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="align">
+      <style>
+        div#grid-container {
+          height: 600px;
+
+          display: grid;
+
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 150px);
+
+          background-color: rgb(173, 72, 72);
+        }
+
+        div.item {
+          font-size: 1.5rem;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          letter-spacing: 3px;
+          background-color: rgb(209, 209, 209);
+
+          border: 1px solid rgb(125, 125, 125);
+        }
+
+        div.selector-group {
+          display: flex;
+          justify-content: space-around;
+        }
+      </style>
+
+      <div id="grid-container" style="
+      justify-items: stretch;
+      align-items: stretch;
+      ">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+      </div>
+
+      <div class="selector-group">
+        <div class="selecter">
+          <p>justify-items</p>
+          <select id="justify-items">
+            <option value="stretch">stretch (default)</option>
+            <option value="start">start</option>
+            <option value="center">center</option>
+            <option value="end">end</option>
+          </select>
+        </div>
+        
+        <div class="selecter">
+          <p>align-items</p>
+          <select id="align-items">
+            <option value="stretch">stretch (default)</option>
+            <option value="start">start</option>
+            <option value="center">center</option>
+            <option value="end">end</option>
+          </select>
+        </div>
+      </div>
+        
+        <script>
+        var justifyItems = document.getElementById('justify-items');
+        var alignItems = document.getElementById('align-items');
+        
+
+        justifyItems.addEventListener('change', function (evt) {
+  document.getElementById('grid-container').style.justifyItems =
+    evt.target.value;
+});
+
+alignItems.addEventListener('change', function (evt) {
+  document.getElementById('grid-container').style.alignItems = evt.target.value;
+})
+      </script>
+    </div>
+    
+  </body>
+</html>
+</div>

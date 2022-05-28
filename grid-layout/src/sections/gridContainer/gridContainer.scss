@@ -3,11 +3,22 @@
 section.grid-container {
   height: 100vh;
 
+  display: grid;
+
+  grid-template-columns: repeat(4, 10%);
+  grid-template-rows: repeat(2, 150px);
+
+  background-color: rgb(255, 255, 255);
+
+  place-items: end start;
+
   div.item {
     font-size: 1.5rem;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
     background-color: rgb(209, 209, 209);
+
+    border: 1px solid rgb(125, 125, 125);
   }
 }
