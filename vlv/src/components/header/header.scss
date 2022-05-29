@@ -1,7 +1,11 @@
 @import '../../style/global_var.scss';
 
 header#header {
-  background-color: $color-primary;
+  background: linear-gradient($color-primary-m-light, $color-primary-m-light),
+    url('../../assets/img/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   grid-column: container-start / container-end;
 }
