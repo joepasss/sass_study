@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="align">
+      <style>
+        div.align {
+          border: 1px solid black;
+          padding: 1rem;
+        }
+
+        div#grid-container {
+          height: 600px;
+
+          display: grid;
+
+          grid-template-columns: repeat(4, 150px);
+          grid-template-rows: repeat(2, 150px);
+
+          background-color: rgb(174, 174, 174);
+        }
+
+        div.item {
+          font-size: 1.5rem;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          letter-spacing: 3px;
+          background-color: rgb(209, 209, 209);
+
+          border: 1px solid rgb(125, 125, 125);
+        }
+
+        div.selector-group {
+          display: flex;
+          justify-content: space-around;
+        }
+      </style>
+
+      <div id="grid-container" style="
+      place-items: stretch, strech;
+
+      justify-content: start;
+      align-content: start;
+      ">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+      </div>
+
+      <div class="selector-group">
+        <div class="selecter">
+          <p>justify-content</p>
+          <select id="justify-content">
+            <option value="start">start</option>
+            <option value="center">center</option>
+            <option value="end">end</option>
+            <option value="space-around">space-around</option>
+            <option value="space-between">space-between</option>
+            <option value="space-evenly">space-evenly</option>
+          </select>
+        </div>
+        
+        <div class="selecter">
+          <p>align-content</p>
+          <select id="align-content">
+            <option value="start">start</option>
+            <option value="center">center</option>
+            <option value="end">end</option>
+            <option value="space-around">space-around</option>
+            <option value="space-between">space-between</option>
+            <option value="space-evenly">space-evenly</option>
+          </select>
+        </div>
+      </div>
+        
+        <script>
+          var justifyContent = document.getElementById('justify-content');
+          var alignContent = document.getElementById('align-content');
+        
+
+          justifyContent.addEventListener('change', function (evt) {
+            document.getElementById('grid-container').style.justifyContent =
+            evt.target.value;
+          });
+
+          alignContent.addEventListener('change', function (evt) {
+            document.getElementById('grid-container').style.alignContent = evt.target.value;
+          });
+      </script>
+    </div>
+
+  </body>
+</html>
+</div>
