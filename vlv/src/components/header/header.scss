@@ -76,3 +76,15 @@ header#header {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  header#header {
+    div.logo__content {
+      div.content {
+        p.content__para {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
