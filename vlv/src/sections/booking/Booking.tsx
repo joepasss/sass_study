@@ -27,7 +27,45 @@ export const Booking: FC = () => {
         </div>
       </section>
 
-      <section id='booking-date'>Booking Date</section>
+      <section id='booking-date'>
+        <div className='schedule'>
+          <div className='arrival'>
+            <h5>Arrival</h5>
+            <div>
+              <p>May</p>
+              <p>09</p>
+              <p>&#65088;</p>
+            </div>
+          </div>
+
+          <div className='departure'>
+            <h5>departure</h5>
+            <div>
+              <p>May</p>
+              <p>23</p>
+              <p>&#65088;</p>
+            </div>
+          </div>
+
+          <div className='guest'>
+            <h5>Guestes</h5>
+            <div>
+              <p>&#65087;</p>
+              <p>09</p>
+              <p>&#65088;</p>
+            </div>
+          </div>
+        </div>
+
+        <div className='contact'>
+          <a href='' className='context-link'>
+            Make a Reservation
+          </a>
+          <p>Reservation Hotline</p>
+          <p>+1-5263-8965-6547</p>
+          <p>Reservation Assistance Available 24 Hours</p>
+        </div>
+      </section>
     </>
   );
 };
