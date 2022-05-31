@@ -9,9 +9,7 @@ export const Booking: FC = () => {
         <h2 className='content-title'>Discover Serenity</h2>
         <p className='content-para'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          doloremque velit alias dolorum veritatis debitis provident molestias,
-          impedit voluptatibus nihil ut natus voluptatem quidem modi? Minima
-          eveniet laboriosam inventore est.
+          doloremque velit alias dolorum veritatis debitis provident molestias.
         </p>
         <div className='icons'>
           <div className='icons-weather'>
