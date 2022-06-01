@@ -60,3 +60,10 @@ li {
   font-size: $font-size-title;
   color: $color-secondary;
 }
+
+@media screen and (max-width: 1000px) {
+  a:link,
+  a:visited {
+    font-size: calc(1rem + 1vw);
+  }
+}

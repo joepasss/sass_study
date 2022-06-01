@@ -81,3 +81,15 @@ header#header {
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  header#header {
+    div.wrapper {
+      div.content {
+        p.content-para {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
