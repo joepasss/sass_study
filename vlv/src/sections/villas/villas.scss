@@ -122,3 +122,31 @@ section#villas {
     background-position: center;
   }
 }
+
+@media screen and (max-width: 800px) {
+  section#villas {
+    gap: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#villas {
+    div.villa {
+      p.villa-para {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 4rem 0;
+      }
+
+      &:hover,
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#villas {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+}
