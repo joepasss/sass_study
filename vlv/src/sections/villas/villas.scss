@@ -1,7 +1,112 @@
 @import '../../style/global_var.scss';
 
 section#villas {
-  background-color: $color-primary;
-
   grid-column: container-start / container-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+
+  div.villa {
+    padding: 2rem;
+
+    transition: transform $transition-duration ease-in-out;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+
+    &:nth-child(2n) {
+      a.villa-link:link,
+      a.villa-link:visited {
+        &::before {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.05);
+    }
+
+    h2.villa-title {
+      font-size: $font-size-title;
+      padding: 0 2rem 1rem 0;
+      font-weight: 400;
+      color: white;
+    }
+
+    p.villa-para {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 4rem 0;
+    }
+
+    a.villa-link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        margin-bottom: 2rem;
+        background-color: white;
+        color: $color-primary;
+
+        z-index: 2;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          height: 0;
+
+          z-index: -1;
+          background-color: $color-secondary;
+
+          transition: height $transition-duration ease-in-out;
+
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+
+      &:hover,
+      &:active {
+        color: white;
+
+        &::before {
+          height: 400%;
+        }
+      }
+    }
+  }
+
+  div.villa-1 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-1.jpg');
+  }
+
+  div.villa-2 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-2.jpg');
+  }
+
+  div.villa-3 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-3.jpg');
+  }
+
+  div.villa-4 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-4.jpg');
+  }
+
+  div.villa-5 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-5.jpg');
+  }
+
+  div.villa-6 {
+    background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Villas/villa-6.jpg');
+  }
 }
