@@ -59,7 +59,7 @@ export const Booking: FC = () => {
         </div>
 
         <div className='contact'>
-          <a href='#' className='contact-link'>
+          <a href='#!' className='contact-link'>
             Make a Reservation
           </a>
           <p>Reservation Hotline</p>

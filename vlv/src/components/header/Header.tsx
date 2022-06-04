@@ -8,7 +8,7 @@ export const Header: FC = () => {
     <header id='header'>
       <Navigation />
       <div className='wrapper'>
-        <a href='#' className='logo'>
+        <a href='#!' className='logo'>
           <span>V</span>L<span>V</span>
         </a>
 
@@ -17,7 +17,7 @@ export const Header: FC = () => {
           <p className='content-para'>
             The team of VLV welcomes you. Start relaxing your soul and enjoy
           </p>
-          <a href='#' className='content-link'>
+          <a href='#!' className='content-link'>
             Discover More
           </a>
         </div>
