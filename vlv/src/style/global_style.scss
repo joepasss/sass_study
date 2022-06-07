@@ -26,6 +26,10 @@ body {
   grid-template-rows: 100vh repeat(8, min-content);
 }
 
+.container > * {
+  font-size: 3rem;
+}
+
 a:link,
 a:visited {
   color: $color-quaternary;

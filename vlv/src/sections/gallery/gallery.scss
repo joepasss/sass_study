@@ -1,13 +1,119 @@
 @import '../../style/global_var.scss';
 
 section#gallery-text {
-  background-color: $color-secondary;
+  background-color: $color-primary;
 
   grid-column: center-start / col-end 1;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+
+  div.content {
+    transform: rotate(-0.25turn);
+
+    h2.title {
+      color: white;
+      font-size: $font-size-title;
+      font-weight: 500;
+    }
+  }
 }
 
 section#gallery-carousel {
-  background-color: $color-primary;
-
   grid-column: col-start 2 / container-end;
+  height: 90vh;
+  overflow: hidden;
+  border: solid 0.2rem $color-secondary;
+  position: relative;
+
+  div.img-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    ul.list {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      transition: transform 2s ease-in-out;
+
+      li.item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  button.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    z-index: 1;
+  }
+
+  button.btn-right {
+    right: 0;
+  }
+
+  div.carousel-nav {
+    position: absolute;
+    bottom: 0;
+    height: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-bottom: 1rem;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3rem;
+
+    button.nav-btn {
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: $color-secondary;
+      border: none;
+      cursor: pointer;
+    }
+
+    button.current--img {
+      background-color: $color-primary;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#gallery-text {
+    display: none;
+  }
+
+  section#gallery-carousel {
+    grid-column: center-start / center-end;
+
+    div.carousel-nav {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 5vw;
+      column-gap: 10vw;
+      height: 10%;
+    }
+  }
 }
