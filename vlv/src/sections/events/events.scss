@@ -1,13 +1,93 @@
 @import '../../style/global_var.scss';
 
 section#events-content {
-  background-color: $color-teriary;
-
   grid-column: container-start / col-end 9;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  div.event-1,
+  div.event-2 {
+    padding: $padding-section;
+
+    display: grid;
+    grid-template-areas:
+      'title'
+      'para';
+    row-gap: 4vh;
+    align-items: center;
+    justify-items: start;
+
+    h2.title {
+      grid-area: title;
+      font-size: $font-size-title;
+      color: white;
+    }
+
+    p.para {
+      grid-area: para;
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  div.event-1 {
+    background: linear-gradient($color-teriary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Events/beach-party.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    border-right: solid 0.2rem $color-teriary;
+  }
+
+  div.event-2 {
+    background: linear-gradient($color-teriary-m-light, $color-teriary-m-light),
+      url('../../assets/img/Events/culture-discovery.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    border-left: solid 0.2rem $color-teriary;
+  }
 }
 
 section#events-text {
-  background-color: $color-primary;
+  background-color: $color-teriary;
 
   grid-column: col-start 10 / center-end;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+
+  h2.title {
+    // transform: rotate(90deg);
+    transform: rotate(0.25turn);
+    font-size: $font-size-title;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#events-content {
+    grid-column: center-start / center-end;
+    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+
+    div.event-1,
+    div.event-2 {
+      border: none;
+
+      p.para {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  section#events-text {
+    display: none;
+  }
 }
