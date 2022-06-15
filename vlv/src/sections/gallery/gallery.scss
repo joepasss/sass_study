@@ -94,7 +94,7 @@ section#gallery-carousel {
       cursor: pointer;
     }
 
-    button.current--img {
+    button#current--img {
       background-color: $color-primary;
     }
   }

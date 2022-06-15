@@ -1,4 +1,6 @@
 import './gallery.scss';
+import { useState, useEffect, useRef, RefObject } from 'react';
+
 import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
 
 import villa_1 from '../../assets/img/Gallery/gallery-1.jpg';
@@ -12,8 +14,13 @@ import villa_8 from '../../assets/img/Gallery/gallery-8.jpg';
 import villa_9 from '../../assets/img/Gallery/gallery-9.jpg';
 import villa_10 from '../../assets/img/Gallery/gallery-10.jpg';
 
+type image = {
+  src: string;
+  alt: string;
+};
+
 export const Gallery = () => {
-  const images = [
+  const images: image[] = [
     {
       src: villa_1,
       alt: 'villa-1',
@@ -56,6 +63,41 @@ export const Gallery = () => {
     },
   ];
 
+  const [current, setCurrent] = useState<number>(0);
+  const listDom = useRef() as RefObject<HTMLUListElement>;
+
+  useEffect(() => {
+    const imgs = Array.from(listDom.current!.children) as HTMLElement[];
+
+    const imgWidth = listDom.current!.children[0].getBoundingClientRect().width;
+
+    // Arrainging the images to next to one another
+    const setImgPostion = (img: HTMLElement, index: number) => {
+      img.style.left = imgWidth * index + 'px';
+    };
+
+    imgs.forEach(setImgPostion);
+  });
+
+  // move image to left (click right button)
+  const moveLeft = () => {
+    const currentImg = listDom.current!.querySelector(
+      '.current--img'
+    ) as HTMLElement;
+
+    if (current !== 9) {
+      const nextImg = currentImg!.nextSibling as HTMLElement;
+      const distToMove = nextImg.style.left;
+
+      // Move to the Next Image
+      listDom.current!.style.transform = 'translateX(-' + distToMove + ')';
+      setCurrent(current + 1);
+    } else {
+      listDom.current!.style.transform = 'translateX(0)';
+      setCurrent(0);
+    }
+  };
+
   return (
     <>
       <section id='gallery-text'>
@@ -67,15 +109,18 @@ export const Gallery = () => {
       <section id='gallery-carousel'>
         {/* button left */}
         <button className='btn btn-left'>
-          <FaCaretLeft size={40} />
+          <FaCaretLeft size={50} color={'orange'} />
         </button>
 
         {/* image container */}
         <div className='img-container'>
-          <ul className='list'>
-            {images.map((image) => {
+          <ul className='list' ref={listDom}>
+            {images.map((image: image, index: number) => {
               return (
-                <li className='item'>
+                <li
+                  className={current === index ? 'current--img item' : 'item'}
+                  key={index}
+                >
                   <img src={image.src} alt={image.src} />
                 </li>
               );
@@ -84,22 +129,52 @@ export const Gallery = () => {
         </div>
 
         {/* button right */}
-        <button className='btn btn-right'>
-          <FaCaretRight size={40} />
+        <button className='btn btn-right' onClick={() => moveLeft()}>
+          <FaCaretRight size={50} color={'orange'} />
         </button>
 
         {/* Carousel Nav */}
         <div className='carousel-nav'>
-          <button className='nav-btn current--img'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
-          <button className='nav-btn'></button>
+          <button
+            className='nav-btn'
+            id={current === 0 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 1 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 2 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 3 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 4 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 5 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 6 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 7 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 8 ? 'current--img' : ''}
+          ></button>
+          <button
+            className='nav-btn'
+            id={current === 9 ? 'current--img' : ''}
+          ></button>
         </div>
       </section>
     </>
