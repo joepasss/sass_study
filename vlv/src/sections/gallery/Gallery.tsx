@@ -106,6 +106,25 @@ export const Gallery = () => {
     moveToImg(prevImg.style.left, current - 1);
   };
 
+  const carouselNav = (index: number) => {
+    const destImg = listDom.current!.childNodes[index] as HTMLElement;
+
+    moveToImg(destImg.style.left, index);
+  };
+
+  const buttons = [];
+
+  for (let i = 0; i < 10; i++) {
+    buttons.push(
+      <button
+        className='nav-btn'
+        id={current === i ? 'current--img' : ''}
+        onClick={() => carouselNav(i)}
+        key={i}
+      />
+    );
+  }
+
   return (
     <>
       <section id='gallery-text'>
@@ -146,48 +165,7 @@ export const Gallery = () => {
         )}
 
         {/* Carousel Nav */}
-        <div className='carousel-nav'>
-          <button
-            className='nav-btn'
-            id={current === 0 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 1 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 2 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 3 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 4 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 5 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 6 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 7 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 8 ? 'current--img' : ''}
-          ></button>
-          <button
-            className='nav-btn'
-            id={current === 9 ? 'current--img' : ''}
-          ></button>
-        </div>
+        <div className='carousel-nav'>{buttons}</div>
       </section>
     </>
   );
