@@ -79,23 +79,31 @@ export const Gallery = () => {
     imgs.forEach(setImgPostion);
   });
 
+  // moveToImg Function
+  const moveToImg = (distToMove: string, targetIndex: number) => {
+    listDom.current!.style.transform = 'translateX(-' + distToMove + ')';
+    setCurrent(targetIndex);
+  };
+
   // move image to left (click right button)
   const moveLeft = () => {
     const currentImg = listDom.current!.querySelector(
       '.current--img'
     ) as HTMLElement;
+    const nextImg = currentImg!.nextSibling as HTMLElement;
 
-    if (current !== 9) {
-      const nextImg = currentImg!.nextSibling as HTMLElement;
-      const distToMove = nextImg.style.left;
+    // Move to the Next Image
+    moveToImg(nextImg.style.left, current + 1);
+  };
 
-      // Move to the Next Image
-      listDom.current!.style.transform = 'translateX(-' + distToMove + ')';
-      setCurrent(current + 1);
-    } else {
-      listDom.current!.style.transform = 'translateX(0)';
-      setCurrent(0);
-    }
+  const moveRight = () => {
+    const currentImg = listDom.current!.querySelector(
+      '.current--img'
+    ) as HTMLElement;
+    const prevImg = currentImg!.previousElementSibling as HTMLElement;
+
+    // Move to the Prev Image
+    moveToImg(prevImg.style.left, current - 1);
   };
 
   return (
@@ -108,9 +116,11 @@ export const Gallery = () => {
 
       <section id='gallery-carousel'>
         {/* button left */}
-        <button className='btn btn-left'>
-          <FaCaretLeft size={50} color={'orange'} />
-        </button>
+        {current !== 0 && (
+          <button className='btn btn-left' onClick={() => moveRight()}>
+            <FaCaretLeft size={50} color={'orange'} />
+          </button>
+        )}
 
         {/* image container */}
         <div className='img-container'>
@@ -129,9 +139,11 @@ export const Gallery = () => {
         </div>
 
         {/* button right */}
-        <button className='btn btn-right' onClick={() => moveLeft()}>
-          <FaCaretRight size={50} color={'orange'} />
-        </button>
+        {current !== 9 && (
+          <button className='btn btn-right' onClick={() => moveLeft()}>
+            <FaCaretRight size={50} color={'orange'} />
+          </button>
+        )}
 
         {/* Carousel Nav */}
         <div className='carousel-nav'>
