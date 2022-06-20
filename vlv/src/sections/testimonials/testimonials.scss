@@ -1,7 +1,105 @@
 @import '../../style/global_var.scss';
 
 section#testimonials {
-  background-color: $color-secondary;
-
   grid-column: center-start / center-end;
+  padding: $padding-section;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28rem);
+  grid-gap: 5rem;
+  place-content: center;
+
+  div.card {
+    width: 28rem;
+    height: 50rem;
+    position: relative;
+
+    div.front,
+    div.back {
+      background-repeat: none;
+      background-position: center;
+      background-size: cover;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      transition: all 1s ease-in-out;
+      transform: perspective(100rem);
+      backface-visibility: hidden;
+
+      display: grid;
+      justify-items: center;
+      align-items: start;
+      padding: 3rem;
+    }
+
+    div.front {
+      h2 {
+        background-color: $color-secondary-m-light;
+        padding: 1rem;
+        border-radius: 0 0 50% 50%;
+        font-size: 1.5rem;
+      }
+    }
+
+    div.back {
+      transform: perspective(100rem) rotateY(0.5turn);
+      background-color: $color-secondary;
+
+      p {
+        place-self: center;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+
+    &:hover {
+      div.front {
+        transform: perspective(100rem) rotateY(0.5turn);
+      }
+
+      div.back {
+        transform: perspective(100rem) rotateY(1turn);
+      }
+    }
+
+    &:first-child {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-1.jpg');
+      }
+    }
+
+    &:nth-child(2) {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-2.jpg');
+      }
+    }
+
+    &:nth-child(3) {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-3.jpg');
+      }
+    }
+
+    &:nth-child(4) {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-4.jpg');
+      }
+    }
+
+    &:nth-child(5) {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-5.jpg');
+      }
+    }
+
+    &:nth-child(6) {
+      div.front {
+        background-image: url('../../assets/img/Testimonials/testimonials-6.jpg');
+      }
+    }
+  }
 }
