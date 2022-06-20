@@ -1,4 +1,5 @@
 import './gallery.scss';
+import { useState, useEffect, useRef, RefObject } from 'react';
 
 import villa_1 from '../../assets/img/Gallery/gallery-1.jpg';
 import villa_2 from '../../assets/img/Gallery/gallery-2.jpg';
@@ -60,9 +61,45 @@ export const Gallery = () => {
     },
   ];
 
+  const [current, setCurrent] = useState<number>(0);
+  const list = useRef() as RefObject<HTMLUListElement>;
+
+  useEffect(() => {
+    const imgWidth: number =
+      list.current!.children[0].getBoundingClientRect().width;
+
+    const setImgPosition = (img: HTMLElement, index: number) => {
+      img.style.left = imgWidth * index + 'px';
+    };
+
+    const imgs = Array.from(list.current!.children) as HTMLElement[];
+
+    imgs.forEach(setImgPosition);
+  });
+
+  const moveToImg = (distToMove: string, targetIndex: number) => {
+    list.current!.style.transform = 'translateX(-' + distToMove + ')';
+    setCurrent(targetIndex);
+  };
+
+  const btnClick = (index: number) => {
+    const destImg = list.current!.childNodes[index] as HTMLElement;
+
+    moveToImg(destImg.style.left, index);
+  };
+
   const buttons = [];
   for (let i = 0; i < 10; i++) {
-    buttons.push(<button className='nav-btn' key={i} />);
+    buttons.push(
+      <button
+        className='nav-btn'
+        key={i}
+        onClick={() => {
+          btnClick(i);
+        }}
+        id={current === i ? 'current--img' : ''}
+      />
+    );
   }
 
   return (
@@ -74,13 +111,25 @@ export const Gallery = () => {
       </section>
 
       <section id='gallery-carousel'>
-        <button className='btn btn-left'>&lt;</button>
+        {current !== 0 && (
+          <button
+            className='btn btn-left'
+            onClick={() => {
+              btnClick(current - 1);
+            }}
+          >
+            &lt;
+          </button>
+        )}
 
         <div className='img-container'>
-          <ul className='list'>
+          <ul className='list' ref={list}>
             {images.map((img: image, index: number) => {
               return (
-                <li className='item' key={index}>
+                <li
+                  className={current === index ? 'current--img item' : 'item'}
+                  key={index}
+                >
                   <img src={img.src} alt={img.alt} />
                 </li>
               );
@@ -88,7 +137,16 @@ export const Gallery = () => {
           </ul>
         </div>
 
-        <button className='btn btn-right'>&gt;</button>
+        {current !== 9 && (
+          <button
+            className='btn btn-right'
+            onClick={() => {
+              btnClick(current + 1);
+            }}
+          >
+            &gt;
+          </button>
+        )}
 
         <div className='carousel-nav'>{buttons}</div>
       </section>
