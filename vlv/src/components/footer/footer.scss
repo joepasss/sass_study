@@ -4,4 +4,78 @@ footer#footer {
   background-color: $color-primary;
 
   grid-column: container-start / container-end;
+  padding: 6vh 4vw;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+
+  div.social {
+    a.social-link:link,
+    a.social-link:visited {
+      display: inline-block;
+      background-color: $color-secondary;
+      border-radius: 2rem;
+      margin-right: 1rem;
+      // box-shadow: 0.5rem 0.5rem 2rem $color-secondary-m-light,
+      //   -0.5rem -0.5rem 2rem $color-secondary-m-light;
+      // transform: scale(0.8);
+      // animation: social 3s linear infinite;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+
+      .icon {
+        color: white;
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@keyframes social {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  footer#footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+
+    div.social {
+      a.social-link:link,
+      a.social-link:visited {
+        .icon {
+          font-size: calc(2rem + 2vw);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer#footer {
+    padding: 4vh 2vw;
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
 }
