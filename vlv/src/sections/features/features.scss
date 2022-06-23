@@ -9,6 +9,7 @@ section#features-content {
   div.feature-1,
   div.feature-2 {
     padding: $padding-section;
+    position: relative;
 
     display: grid;
     grid-template-areas:
@@ -17,6 +18,35 @@ section#features-content {
     row-gap: 4vh;
     align-items: center;
     justify-items: start;
+
+    border-left: solid 0.2rem $color-secondary;
+
+    &:first-of-type {
+      border-left: 0;
+      border-right: solid 0.2rem $color-secondary;
+    }
+
+    img.background-img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -2;
+      object-fit: cover;
+    }
+
+    &:after {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(
+        $color-secondary-m-light,
+        $color-secondary-m-dark
+      );
+    }
 
     h2.title {
       grid-area: title;
@@ -29,32 +59,6 @@ section#features-content {
       color: white;
       font-weight: 500;
     }
-  }
-
-  div.feature-1 {
-    background: linear-gradient(
-        $color-secondary-m-light,
-        $color-secondary-m-light
-      ),
-      url('../../assets/img/Features/cocktail.jpg');
-
-    background-size: cover;
-    background-position: center;
-
-    border-right: solid 0.2rem $color-secondary;
-  }
-
-  div.feature-2 {
-    background: linear-gradient(
-        $color-secondary-m-light,
-        $color-secondary-m-light
-      ),
-      url('../../assets/img/Features/surfing.jpg');
-
-    background-size: cover;
-    background-position: center;
-
-    border-left: solid 0.2rem $color-secondary;
   }
 }
 

@@ -2,15 +2,18 @@ import './booking.scss';
 import { FC } from 'react';
 import { FaSun, FaClock } from 'react-icons/fa';
 
+import { FaSun, FaClock } from 'react-icons/fa';
+
 export const Booking: FC = () => {
   return (
     <>
       <section id='booking-content'>
         <h2 className='content-title'>Discover Serenity</h2>
         <p className='content-para'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-          doloremque velit alias dolorum veritatis debitis provident molestias.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam officia
+          magni id consectetur! Sequi, adipisci?
         </p>
+
         <div className='icons'>
           <div className='icons-weather'>
             <FaSun className='icon' />
@@ -18,6 +21,7 @@ export const Booking: FC = () => {
               24 <sup>&#8451;</sup>
             </p>
           </div>
+
           <div className='icons-time'>
             <FaClock className='icon' />
             <p>05:00 PM</p>
@@ -27,7 +31,7 @@ export const Booking: FC = () => {
 
       <section id='booking-date'>
         <div className='schedule'>
-          <div className='arrival'>
+          <div className='arrival schedule-content'>
             <h5>Arrival</h5>
             <div>
               <p>May</p>
@@ -36,7 +40,7 @@ export const Booking: FC = () => {
             </div>
           </div>
 
-          <div className='departure'>
+          <div className='departure schedule-content'>
             <h5>departure</h5>
             <div>
               <p>May</p>
@@ -45,7 +49,7 @@ export const Booking: FC = () => {
             </div>
           </div>
 
-          <div className='guest'>
+          <div className='guest schedule-content'>
             <h5>Guestes</h5>
             <div>
               <p>&#65087;</p>
@@ -56,11 +60,11 @@ export const Booking: FC = () => {
         </div>
 
         <div className='contact'>
-          <a href='' className='context-link'>
+          <a href='#!' className='contact-link'>
             Make a Reservation
           </a>
           <p>Reservation Hotline</p>
-          <p>+1-5263-8965-6547</p>
+          <p>+1-5262-6547</p>
           <p>Reservation Assistance Available 24 Hours</p>
         </div>
       </section>

@@ -2,16 +2,17 @@
 
 section#motto {
   background-color: $color-primary;
+
   grid-column: container-start / container-end;
 
   padding: 10vh 3vw;
 
-  .contents {
+  div.content {
     width: 80%;
     margin: 0 auto;
     text-align: center;
 
-    h2.moto-title {
+    h2.motto-title {
       font-size: $font-size-title;
       padding: 0 2rem 1rem;
       font-weight: 300;
@@ -34,8 +35,8 @@ section#motto {
 
 @media screen and (max-width: 600px) {
   section#motto {
-    div.contents {
-      p.moto-para {
+    div.content {
+      p.motto-para {
         font-size: 1.5rem;
       }
     }

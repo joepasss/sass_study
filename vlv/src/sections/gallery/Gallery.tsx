@@ -1,8 +1,6 @@
 import './gallery.scss';
 import { useState, useEffect, useRef, RefObject } from 'react';
 
-import { FaCaretLeft, FaCaretRight } from 'react-icons/fa';
-
 import villa_1 from '../../assets/img/Gallery/gallery-1.jpg';
 import villa_2 from '../../assets/img/Gallery/gallery-2.jpg';
 import villa_3 from '../../assets/img/Gallery/gallery-3.jpg';
@@ -64,63 +62,42 @@ export const Gallery = () => {
   ];
 
   const [current, setCurrent] = useState<number>(0);
-  const listDom = useRef() as RefObject<HTMLUListElement>;
+  const list = useRef() as RefObject<HTMLUListElement>;
 
   useEffect(() => {
-    const imgs = Array.from(listDom.current!.children) as HTMLElement[];
+    const imgWidth: number =
+      list.current!.children[0].getBoundingClientRect().width;
 
-    const imgWidth = listDom.current!.children[0].getBoundingClientRect().width;
-
-    // Arrainging the images to next to one another
-    const setImgPostion = (img: HTMLElement, index: number) => {
+    const setImgPosition = (img: HTMLElement, index: number) => {
       img.style.left = imgWidth * index + 'px';
     };
 
-    imgs.forEach(setImgPostion);
+    const imgs = Array.from(list.current!.children) as HTMLElement[];
+
+    imgs.forEach(setImgPosition);
   });
 
-  // moveToImg Function
   const moveToImg = (distToMove: string, targetIndex: number) => {
-    listDom.current!.style.transform = 'translateX(-' + distToMove + ')';
+    list.current!.style.transform = 'translateX(-' + distToMove + ')';
     setCurrent(targetIndex);
   };
 
-  // move image to left (click right button)
-  const moveLeft = () => {
-    const currentImg = listDom.current!.querySelector(
-      '.current--img'
-    ) as HTMLElement;
-    const nextImg = currentImg!.nextSibling as HTMLElement;
-
-    // Move to the Next Image
-    moveToImg(nextImg.style.left, current + 1);
-  };
-
-  const moveRight = () => {
-    const currentImg = listDom.current!.querySelector(
-      '.current--img'
-    ) as HTMLElement;
-    const prevImg = currentImg!.previousElementSibling as HTMLElement;
-
-    // Move to the Prev Image
-    moveToImg(prevImg.style.left, current - 1);
-  };
-
-  const carouselNav = (index: number) => {
-    const destImg = listDom.current!.childNodes[index] as HTMLElement;
+  const btnClick = (index: number) => {
+    const destImg = list.current!.childNodes[index] as HTMLElement;
 
     moveToImg(destImg.style.left, index);
   };
 
   const buttons = [];
-
   for (let i = 0; i < 10; i++) {
     buttons.push(
       <button
         className='nav-btn'
-        id={current === i ? 'current--img' : ''}
-        onClick={() => carouselNav(i)}
         key={i}
+        onClick={() => {
+          btnClick(i);
+        }}
+        id={current === i ? 'current--img' : ''}
       />
     );
   }
@@ -134,37 +111,43 @@ export const Gallery = () => {
       </section>
 
       <section id='gallery-carousel'>
-        {/* button left */}
         {current !== 0 && (
-          <button className='btn btn-left' onClick={() => moveRight()}>
-            <FaCaretLeft size={50} color={'orange'} />
+          <button
+            className='btn btn-left'
+            onClick={() => {
+              btnClick(current - 1);
+            }}
+          >
+            &lt;
           </button>
         )}
 
-        {/* image container */}
         <div className='img-container'>
-          <ul className='list' ref={listDom}>
-            {images.map((image: image, index: number) => {
+          <ul className='list' ref={list}>
+            {images.map((img: image, index: number) => {
               return (
                 <li
                   className={current === index ? 'current--img item' : 'item'}
                   key={index}
                 >
-                  <img src={image.src} alt={image.src} />
+                  <img src={img.src} alt={img.alt} />
                 </li>
               );
             })}
           </ul>
         </div>
 
-        {/* button right */}
         {current !== 9 && (
-          <button className='btn btn-right' onClick={() => moveLeft()}>
-            <FaCaretRight size={50} color={'orange'} />
+          <button
+            className='btn btn-right'
+            onClick={() => {
+              btnClick(current + 1);
+            }}
+          >
+            &gt;
           </button>
         )}
 
-        {/* Carousel Nav */}
         <div className='carousel-nav'>{buttons}</div>
       </section>
     </>

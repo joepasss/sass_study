@@ -9,14 +9,14 @@ header#header {
 
   grid-column: container-start / container-end;
 
-  div.logo__content {
+  div.wrapper {
     display: grid;
 
     grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
     grid-template-rows: min-content;
+    justify-items: center;
 
     height: 90%;
-    justify-items: center;
 
     a.logo {
       grid-column: 2 / 3;
@@ -34,7 +34,7 @@ header#header {
       grid-column: 1 / -1;
       align-self: center;
 
-      h1.content__title {
+      h1.content-title {
         font-size: calc(4rem + 4vw);
         font-weight: 300;
         color: white;
@@ -42,35 +42,40 @@ header#header {
         padding: 0 2rem 0 $font-size-title;
       }
 
-      p.content__para {
+      p.content-para {
         font-size: calc(1rem + 2vw);
         font-weight: 500;
         padding: 2vh 2rem 6vh $font-size-title;
       }
 
-      a.content__link:link,
-      a.content__link:visited {
-        margin-left: $font-size-title;
-        border: 0.2rem solid $color-teriary;
+      a.content-link {
+        &:link,
+        &:visited {
+          margin-left: $font-size-title;
+          border: 0.2rem solid $color-teriary;
 
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background-color: $color-teriary;
-          transform: scaleX(0);
-          transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
-          z-index: -1;
+          &::before {
+            content: '';
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            background-color: $color-teriary;
+            transform: scaleX(0);
+            transition: transform 0.45s cubic-bezier(1, 0, 0, 1);
+
+            z-index: -1;
+          }
         }
-      }
 
-      a.content__link:hover,
-      a.content__link:active {
-        &::before {
-          transform: scaleX(1);
+        &:hover,
+        &:active {
+          &::before {
+            transform: scaleX(1);
+          }
         }
       }
     }
@@ -79,9 +84,9 @@ header#header {
 
 @media screen and (max-width: 600px) {
   header#header {
-    div.logo__content {
+    div.wrapper {
       div.content {
-        p.content__para {
+        p.content-para {
           font-size: 2rem;
         }
       }

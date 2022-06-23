@@ -5,24 +5,24 @@ export const Navigation: FC = () => {
   return (
     <nav className='main-nav'>
       <input type='checkbox' />
-      <div className='main-nav--hamburger'>
+      <div className='hamburger'>
         <div></div>
       </div>
-      <div className='main-nav--menu'>
+      <div className='menu'>
         <div>
           <div>
             <ul>
               <li>
-                <a href='!#'>Home</a>
+                <a href='#!'>Home</a>
               </li>
               <li>
-                <a href='!#'>Vilas</a>
+                <a href='#!'>Vilas</a>
               </li>
               <li>
-                <a href='!#'>About</a>
+                <a href='#!'>About</a>
               </li>
               <li>
-                <a href='!#'>Contact</a>
+                <a href='#!'>Contact</a>
               </li>
             </ul>
           </div>

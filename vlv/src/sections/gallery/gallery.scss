@@ -25,7 +25,6 @@ section#gallery-carousel {
   grid-column: col-start 2 / container-end;
   height: 90vh;
   overflow: hidden;
-  border: solid 0.2rem $color-secondary;
   position: relative;
 
   div.img-container {
@@ -56,15 +55,20 @@ section#gallery-carousel {
   }
 
   button.btn {
+    padding: 1rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
+    background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 
     z-index: 1;
+
+    font-size: 3rem;
+    font-weight: 600;
+    color: $color-secondary;
   }
 
   button.btn-right {
@@ -77,8 +81,7 @@ section#gallery-carousel {
     height: 5%;
     left: 50%;
     transform: translateX(-50%);
-
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     display: grid;
     grid-template-rows: 1fr;

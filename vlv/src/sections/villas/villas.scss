@@ -11,8 +11,9 @@ section#villas {
     padding: 2rem;
 
     transition: transform $transition-duration ease-in-out;
-
     cursor: pointer;
+    background-size: cover;
+    background-position: center;
 
     &:nth-child(2n) {
       a.villa-link:link,
@@ -33,7 +34,6 @@ section#villas {
       padding: 0 2rem 1rem 0;
       font-weight: 400;
       color: white;
-      text-transform: uppercase;
     }
 
     p.villa-para {
@@ -80,52 +80,47 @@ section#villas {
     }
   }
 
-  div.villas-1 {
+  div.villa-1 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-1.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
-  div.villas-2 {
+  div.villa-2 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-2.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
-  div.villas-3 {
+  div.villa-3 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-3.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
-  div.villas-4 {
+  div.villa-4 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-4.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
-  div.villas-5 {
+  div.villa-5 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-5.jpg');
-    background-size: cover;
-    background-position: center;
   }
 
-  div.villas-6 {
+  div.villa-6 {
     background: linear-gradient($color-primary-m-light, $color-teriary-m-light),
       url('../../assets/img/Villas/villa-6.jpg');
-    background-size: cover;
-    background-position: center;
   }
 }
 
 @media screen and (max-width: 800px) {
   section#villas {
     gap: 0;
+
+    div.villa {
+      &:hover,
+      &:active {
+        transform: scale(1);
+      }
+    }
   }
 }
 
@@ -135,11 +130,6 @@ section#villas {
       p.villa-para {
         font-size: 1.5rem;
         margin: 1.5rem 0 4rem 0;
-      }
-
-      &:hover,
-      &:active {
-        transform: scale(1);
       }
     }
   }
