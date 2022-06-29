@@ -1,3 +1,31 @@
-body {
-  background-color: red;
+// Variables
+// CSS Variables
+:root {
+  --color-primary: yellowgreen;
+}
+
+// Sass Variables
+$color-primary: #303960;
+$color-secondary: #ea9a96;
+$color-tertiary: #f8b24f;
+$color-white: #fff;
+
+// Sass Maps
+$colors: (
+  'color-primary': #303960,
+  'color-secondary': #ea9a96,
+  'color-tertiary': #f8b24f,
+  'color-white': #fff,
+);
+
+section {
+  background-color: map-get($colors, color-primary);
+}
+
+h2 {
+  color: map-get($colors, color-secondary);
+}
+
+p {
+  color: map-get($colors, color-white);
 }
