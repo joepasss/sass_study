@@ -1,0 +1,8 @@
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+section {
+  background-color: color(color-secondary);
+  padding: 40px;
+}

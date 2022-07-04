@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass sass/style.scss up/css/style.css -w"
+    "sass": "node-sass --watch sass -o up/css"
   },
   "author": "",
   "license": "ISC",

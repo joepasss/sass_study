@@ -2,6 +2,9 @@
 // CSS Variables
 :root {
   --color-primary: yellowgreen;
+
+  font-size: 62.5%;
+  font-family: monospace;
 }
 
 // Sass Variables
@@ -19,13 +22,17 @@ $colors: (
 );
 
 section {
-  background-color: map-get($colors, color-primary);
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
 }
 
-h2 {
-  color: map-get($colors, color-secondary);
-}
+// Partials & Imports (at import rule => @import)
+@import 'reset';
 
-p {
-  color: map-get($colors, color-white);
-}
+// Sass Function
+@import 'functions';
