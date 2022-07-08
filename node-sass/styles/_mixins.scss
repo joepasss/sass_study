@@ -1,0 +1,53 @@
+// Sass Mixins => @mixin rule
+@mixin section-styling($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+
+  margin-bottom: 1rem;
+
+  flex-direction: $direction;
+}
+
+section.section-1 {
+  @include section-styling(row);
+
+  background-color: color(color-primary);
+
+  div.content {
+    font-size: 3rem;
+  }
+
+  div.content:last-child {
+    margin-left: 20rem;
+  }
+}
+
+section.section-2 {
+  @include section-styling(column);
+
+  background-color: color(color-tertiary);
+
+  div.content {
+    font-size: 3rem;
+  }
+}
+
+// Appending Styles => one of the uses cases is declaring media queries
+$bpDesktop: 1000px;
+@mixin media-desktop {
+  @media screen and (max-width: $bpDesktop) {
+    @content;
+  }
+}
+
+section.section-1 {
+  @include media-desktop {
+    flex-direction: column;
+  }
+
+  div.content:last-child {
+    margin-left: 0;
+  }
+}

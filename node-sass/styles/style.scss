@@ -21,18 +21,11 @@ $colors: (
   'color-white': #fff,
 );
 
-section {
-  h2 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-}
-
 // Partials & Imports (at import rule => @import)
 @import 'reset';
 
 // Sass Function
 @import 'functions';
+
+// Sass Mixins
+@import 'mixins';
