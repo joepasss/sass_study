@@ -40,3 +40,14 @@ section.section-2 {
 
 section.section-1 div.content:last-child {
   margin-left: 0; }
+
+section.section-1 div.content h2.title, section.section-1 div.content p.para {
+  margin: 2rem 0;
+  font-family: monospace;
+  font-size: 4rem; }
+
+section.section-1 {
+  background-color: #ea9a96; }
+  section.section-1 div.content {
+    padding: 2rem;
+    color: #fff; }

@@ -1,0 +1,49 @@
+// @extend Rule
+
+// Using Css Selectors
+// section.section-1 {
+//   background-color: color(color-primary);
+
+//   div.content {
+//     padding: 20px;
+//     color: color(color-white);
+
+//     h2.title {
+//       margin: 15px 0;
+//       font-family: Arial, Helvetica, sans-serif;
+//       letter-spacing: 1px;
+//     }
+
+//     p.para {
+//       @extend h2.title;
+//     }
+//   }
+// }
+
+// section.section-2 {
+//   @extend section.section-1;
+// }
+
+// Using Placeholder Rulesets
+%text-styling {
+  margin: 2rem 0;
+  font-family: monospace;
+  font-size: 4rem;
+}
+
+section.section-1 {
+  background-color: color(color-secondary);
+
+  div.content {
+    padding: 2rem;
+    color: color(color-white);
+
+    h2.title {
+      @extend %text-styling;
+    }
+
+    p.para {
+      @extend %text-styling;
+    }
+  }
+}
