@@ -1,0 +1,29 @@
+// @each Rule
+
+section {
+  div {
+    height: 50rem;
+    aspect-ratio: 1.25 / 1;
+  }
+}
+
+// // Method - 1
+// $bg-pics: (ballet, cat, gramophone, sparrow, sunset, turkey);
+// @each $bg-divs in $bg-pics {
+//   .#{$bg-divs} {
+//     background-image: url('../img/#{$bg-divs}.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//   }
+// }
+
+// Method - 2
+@each $bg-divs in (ballet, cat, gramophone, sparrow, sunset, turkey) {
+  .#{$bg-divs} {
+    background-image: url('../img/#{$bg-divs}.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
