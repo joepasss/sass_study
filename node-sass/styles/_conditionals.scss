@@ -1,0 +1,18 @@
+// @if Rule
+
+@mixin section($size) {
+  width: $size;
+  aspect-ratio: 1 / 1;
+
+  @if $size < 200px {
+    background-color: color(color-primary);
+  } @else if $size == 250px {
+    background-color: color(color-secondary);
+  } @else {
+    background-color: green;
+  }
+}
+
+section {
+  @include section(300px);
+}

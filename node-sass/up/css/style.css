@@ -52,42 +52,7 @@ section.section-1 {
     padding: 2rem;
     color: #fff; }
 
-section div {
-  height: 50rem;
-  aspect-ratio: 1.25 / 1; }
-
-.ballet {
-  background-image: url("../img/ballet.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.cat {
-  background-image: url("../img/cat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.gramophone {
-  background-image: url("../img/gramophone.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.sparrow {
-  background-image: url("../img/sparrow.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.sunset {
-  background-image: url("../img/sunset.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.turkey {
-  background-image: url("../img/turkey.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+section {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background-color: green; }
