@@ -1,0 +1,21 @@
+// @for rule
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  div[class^='content'] {
+    height: 50rem;
+    aspect-ratio: 1 / 1;
+
+    background-repeat: no-repeat;
+  }
+}
+
+@for $img from 1 through 6 {
+  .content-#{$img} {
+    background-image: url('../img/gallery-#{$img}.jpg');
+  }
+}
+
+// #{} => template literal => it is used to access the value of any variable

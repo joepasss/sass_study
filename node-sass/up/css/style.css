@@ -52,7 +52,28 @@ section.section-1 {
     padding: 2rem;
     color: #fff; }
 
-section {
-  width: 300px;
-  aspect-ratio: 1 / 1;
-  background-color: green; }
+.gallery {
+  display: flex;
+  flex-wrap: wrap; }
+  .gallery div[class^='content'] {
+    height: 50rem;
+    aspect-ratio: 1 / 1;
+    background-repeat: no-repeat; }
+
+.content-1 {
+  background-image: url("../img/gallery-1.jpg"); }
+
+.content-2 {
+  background-image: url("../img/gallery-2.jpg"); }
+
+.content-3 {
+  background-image: url("../img/gallery-3.jpg"); }
+
+.content-4 {
+  background-image: url("../img/gallery-4.jpg"); }
+
+.content-5 {
+  background-image: url("../img/gallery-5.jpg"); }
+
+.content-6 {
+  background-image: url("../img/gallery-6.jpg"); }
