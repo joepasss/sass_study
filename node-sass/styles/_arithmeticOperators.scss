@@ -1,0 +1,28 @@
+// Sass Arithmatic Operators
+
+h2 {
+  // Regular CSS calc() function Addition
+  // 1% of vw == 1vw
+  font-size: calc(10px + 1vw);
+
+  // Sass Addition Operator
+  font-size: (10px + 10px);
+
+  // CSS Subtraction
+  font-size: calc(20px - 5px);
+
+  // Sass Subtraction
+  font-size: 20px - 10px;
+
+  // CSS Multiplication
+  font-size: calc(10px * 5);
+
+  // Sass Multiplication
+  font-size: (10px * 3);
+
+  // CSS Divide
+  font-size: calc(50px / 2);
+
+  // Sass Divide
+  font-size: (100px / 3);
+}

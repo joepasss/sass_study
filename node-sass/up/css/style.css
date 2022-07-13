@@ -123,3 +123,13 @@ section.gallery div.content-5 {
 section.gallery div.content-6 {
   background-image: url("../img/gallery-6.jpg");
   background-size: cover; }
+
+h2 {
+  font-size: calc(10px + 1vw);
+  font-size: 20px;
+  font-size: calc(20px - 5px);
+  font-size: 10px;
+  font-size: calc(10px * 5);
+  font-size: 30px;
+  font-size: calc(50px / 2);
+  font-size: 33.33333px; }
