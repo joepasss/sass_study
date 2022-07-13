@@ -34,10 +34,13 @@ $colors: (
 @import 'extend';
 
 // Sass Each
-// @import 'each';
+@import 'each';
 
 // Sass Conditionals
 @import 'conditionals';
 
 // Sass For loops
-@import 'forloops';
+// @import 'forloops';
+
+// Sass While Loops
+@import 'whileLoop';

@@ -52,28 +52,74 @@ section.section-1 {
     padding: 2rem;
     color: #fff; }
 
-.gallery {
+section div {
+  height: 50rem;
+  aspect-ratio: 1.25 / 1; }
+
+.ballet {
+  background-image: url("../img/ballet.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.cat {
+  background-image: url("../img/cat.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.gramophone {
+  background-image: url("../img/gramophone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.sparrow {
+  background-image: url("../img/sparrow.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.sunset {
+  background-image: url("../img/sunset.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.turkey {
+  background-image: url("../img/turkey.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+section.gallery {
   display: flex;
   flex-wrap: wrap; }
-  .gallery div[class^='content'] {
+  section.gallery div[class^='content'] {
     height: 50rem;
     aspect-ratio: 1 / 1;
     background-repeat: no-repeat; }
 
-.content-1 {
-  background-image: url("../img/gallery-1.jpg"); }
+section.gallery div.content-1 {
+  background-image: url("../img/gallery-1.jpg");
+  background-size: cover; }
 
-.content-2 {
-  background-image: url("../img/gallery-2.jpg"); }
+section.gallery div.content-2 {
+  background-image: url("../img/gallery-2.jpg");
+  background-size: cover; }
 
-.content-3 {
-  background-image: url("../img/gallery-3.jpg"); }
+section.gallery div.content-3 {
+  background-image: url("../img/gallery-3.jpg");
+  background-size: cover; }
 
-.content-4 {
-  background-image: url("../img/gallery-4.jpg"); }
+section.gallery div.content-4 {
+  background-image: url("../img/gallery-4.jpg");
+  background-size: cover; }
 
-.content-5 {
-  background-image: url("../img/gallery-5.jpg"); }
+section.gallery div.content-5 {
+  background-image: url("../img/gallery-5.jpg");
+  background-size: cover; }
 
-.content-6 {
-  background-image: url("../img/gallery-6.jpg"); }
+section.gallery div.content-6 {
+  background-image: url("../img/gallery-6.jpg");
+  background-size: cover; }
