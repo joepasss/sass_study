@@ -1,11 +1,17 @@
 // @for rule
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: 1fr auto-fit;
+  grid-template-columns: [container-start] repeat(3, 1fr) [container-end];
+
+  h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: container-start / container-end;
+  }
 
   div[class^='content'] {
-    height: 50rem;
     aspect-ratio: 1 / 1;
 
     background-repeat: no-repeat;
@@ -15,6 +21,7 @@
 @for $img from 1 through 6 {
   .content-#{$img} {
     background-image: url('../img/gallery-#{$img}.jpg');
+    background-position: center;
   }
 }
 

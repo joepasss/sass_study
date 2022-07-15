@@ -53,27 +53,78 @@ section.section-1 {
     color: #fff; }
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap; }
+  display: grid;
+  grid-template-rows: 1fr auto-fit;
+  grid-template-columns: [container-start] repeat(3, 1fr) [container-end]; }
+  .gallery h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: container-start / container-end; }
   .gallery div[class^='content'] {
-    height: 50rem;
     aspect-ratio: 1 / 1;
     background-repeat: no-repeat; }
 
 .content-1 {
-  background-image: url("../img/gallery-1.jpg"); }
+  background-image: url("../img/gallery-1.jpg");
+  background-position: center; }
 
 .content-2 {
-  background-image: url("../img/gallery-2.jpg"); }
+  background-image: url("../img/gallery-2.jpg");
+  background-position: center; }
 
 .content-3 {
-  background-image: url("../img/gallery-3.jpg"); }
+  background-image: url("../img/gallery-3.jpg");
+  background-position: center; }
 
 .content-4 {
-  background-image: url("../img/gallery-4.jpg"); }
+  background-image: url("../img/gallery-4.jpg");
+  background-position: center; }
 
 .content-5 {
-  background-image: url("../img/gallery-5.jpg"); }
+  background-image: url("../img/gallery-5.jpg");
+  background-position: center; }
 
 .content-6 {
-  background-image: url("../img/gallery-6.jpg"); }
+  background-image: url("../img/gallery-6.jpg");
+  background-position: center; }
+
+section.gallery-while {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: [container-start] 1fr [center-start] repeat(3, [col-start] minmax(min-content, 50rem) [col-end]) [center-end] 1fr [container-end]; }
+  section.gallery-while h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: center-start / center-end; }
+  section.gallery-while div[class^='content'] {
+    aspect-ratio: 1 / 1; }
+
+section.gallery-while div.content-while-1 {
+  background-image: url("../img/gallery-1.jpg");
+  background-position: center;
+  grid-column: col-start 1/col-end 1; }
+
+section.gallery-while div.content-while-2 {
+  background-image: url("../img/gallery-2.jpg");
+  background-position: center;
+  grid-column: col-start 2/col-end 2; }
+
+section.gallery-while div.content-while-3 {
+  background-image: url("../img/gallery-3.jpg");
+  background-position: center;
+  grid-column: col-start 3/col-end 3; }
+
+section.gallery-while div.content-while-4 {
+  background-image: url("../img/gallery-4.jpg");
+  background-position: center;
+  grid-column: col-start 1/col-end 1; }
+
+section.gallery-while div.content-while-5 {
+  background-image: url("../img/gallery-5.jpg");
+  background-position: center;
+  grid-column: col-start 2/col-end 2; }
+
+section.gallery-while div.content-while-6 {
+  background-image: url("../img/gallery-6.jpg");
+  background-position: center;
+  grid-column: col-start 3/col-end 3; }

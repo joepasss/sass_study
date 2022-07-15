@@ -1,0 +1,40 @@
+// @while rule
+
+section.gallery-while {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns:
+    [container-start] 1fr [center-start] repeat(
+      3,
+      [col-start]minmax(min-content, 50rem) [col-end]
+    )
+    [center-end] 1fr [container-end];
+
+  h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: center-start / center-end;
+  }
+
+  div[class^='content'] {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+$img: 1;
+@while $img < 7 {
+  section.gallery-while {
+    div.content-while-#{$img} {
+      background-image: url('../img/gallery-#{$img}.jpg');
+      background-position: center;
+
+      @if $img <= 3 {
+        grid-column: col-start $img / col-end $img;
+      } @else {
+        grid-column: col-start ($img - 3) / col-end ($img - 3);
+      }
+
+      $img: $img + 1;
+    }
+  }
+}
