@@ -1,0 +1,14 @@
+@import './reset';
+@import './variables';
+@import './utilities';
+
+// import sections style
+@import '../sections/header/header';
+@import '../sections/showcase/showcase';
+@import '../sections/motto/motto';
+@import '../sections/features/features';
+@import '../sections/trainers/trainers';
+@import '../sections/testimonials/testimonials';
+@import '../sections/clients/clients';
+@import '../sections/register/register';
+@import '../sections/footer/footer';
