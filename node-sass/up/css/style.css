@@ -52,84 +52,79 @@ section.section-1 {
     padding: 2rem;
     color: #fff; }
 
-section div {
-  height: 50rem;
-  aspect-ratio: 1.25 / 1; }
-
-.ballet {
-  background-image: url("../img/ballet.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.cat {
-  background-image: url("../img/cat.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.gramophone {
-  background-image: url("../img/gramophone.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.sparrow {
-  background-image: url("../img/sparrow.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.sunset {
-  background-image: url("../img/sunset.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-.turkey {
-  background-image: url("../img/turkey.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-
-section.gallery {
-  display: flex;
-  flex-wrap: wrap; }
-  section.gallery div[class^='content'] {
-    height: 50rem;
+.gallery {
+  display: grid;
+  grid-template-rows: 1fr auto-fit;
+  grid-template-columns: [container-start] repeat(3, 1fr) [container-end]; }
+  .gallery h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: container-start / container-end; }
+  .gallery div[class^='content'] {
     aspect-ratio: 1 / 1;
     background-repeat: no-repeat; }
 
-section.gallery div.content-1 {
+.content-1 {
   background-image: url("../img/gallery-1.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-section.gallery div.content-2 {
+.content-2 {
   background-image: url("../img/gallery-2.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-section.gallery div.content-3 {
+.content-3 {
   background-image: url("../img/gallery-3.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-section.gallery div.content-4 {
+.content-4 {
   background-image: url("../img/gallery-4.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-section.gallery div.content-5 {
+.content-5 {
   background-image: url("../img/gallery-5.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-section.gallery div.content-6 {
+.content-6 {
   background-image: url("../img/gallery-6.jpg");
-  background-size: cover; }
+  background-position: center; }
 
-h2 {
-  font-size: calc(10px + 1vw);
-  font-size: 20px;
-  font-size: calc(20px - 5px);
-  font-size: 10px;
-  font-size: calc(10px * 5);
-  font-size: 30px;
-  font-size: calc(50px / 2);
-  font-size: 33.33333px; }
+section.gallery-while {
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: [container-start] 1fr [center-start] repeat(3, [col-start] minmax(min-content, 50rem) [col-end]) [center-end] 1fr [container-end]; }
+  section.gallery-while h2.title {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    grid-column: center-start / center-end; }
+  section.gallery-while div[class^='content'] {
+    aspect-ratio: 1 / 1; }
+
+section.gallery-while div.content-while-1 {
+  background-image: url("../img/gallery-1.jpg");
+  background-position: center;
+  grid-column: col-start 1/col-end 1; }
+
+section.gallery-while div.content-while-2 {
+  background-image: url("../img/gallery-2.jpg");
+  background-position: center;
+  grid-column: col-start 2/col-end 2; }
+
+section.gallery-while div.content-while-3 {
+  background-image: url("../img/gallery-3.jpg");
+  background-position: center;
+  grid-column: col-start 3/col-end 3; }
+
+section.gallery-while div.content-while-4 {
+  background-image: url("../img/gallery-4.jpg");
+  background-position: center;
+  grid-column: col-start 1/col-end 1; }
+
+section.gallery-while div.content-while-5 {
+  background-image: url("../img/gallery-5.jpg");
+  background-position: center;
+  grid-column: col-start 2/col-end 2; }
+
+section.gallery-while div.content-while-6 {
+  background-image: url("../img/gallery-6.jpg");
+  background-position: center;
+  grid-column: col-start 3/col-end 3; }
