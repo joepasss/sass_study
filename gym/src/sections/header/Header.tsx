@@ -14,7 +14,7 @@ export const Header: FC = () => {
       <div className='header__overlay'></div>
 
       <nav className='header__nav'>
-        <a href='#!' className='header__nav--log'>
+        <a href='#!' className='header__nav--logo'>
           <img src={logo} alt='LOGO' />
         </a>
 

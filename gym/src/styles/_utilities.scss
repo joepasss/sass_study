@@ -19,11 +19,17 @@ body {
   grid-template-rows: min-content 100vh repeat(9, min-content);
 }
 
+li {
+  list-style: none;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
   color: var(--color-quinary);
   font-weight: font-weight(small);
+  letter-spacing: 0.2rem;
+  font-size: font-size(small);
 }
 
 i {

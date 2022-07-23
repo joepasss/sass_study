@@ -1,0 +1,108 @@
+.header {
+  @include media-desktop {
+    &__nav {
+      &--links {
+        &__item {
+          a:link,
+          a:visited {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-tablet {
+    &__menu {
+      position: fixed;
+      height: 4rem;
+      width: 4rem;
+      top: 2rem;
+      right: 2rem;
+      padding: 2.5rem;
+      z-index: 20;
+
+      cursor: pointer;
+
+      &--line,
+      &--line::before,
+      &--line::after {
+        content: '';
+        position: absolute;
+        width: 3.5rem;
+        height: 0.2rem;
+        background-color: var(--color-quinary);
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+
+        transition: all 0.5s ease-in-out;
+      }
+
+      &--line::before {
+        top: -2.2rem;
+      }
+
+      &--line::after {
+        top: 1.3rem;
+      }
+    }
+
+    &__nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 25rem;
+      height: 100vh;
+      line-height: initial;
+      flex-direction: column;
+      text-align: center;
+      z-index: 20;
+      // transform: perspective(70rem) rotateY(0.5turn);
+      transform-origin: top left;
+      transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+      &--links {
+        height: 80%;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        &__item {
+          animation: initial;
+
+          a:link,
+          a:visited {
+            transform-origin: left;
+            margin-right: initial;
+            padding: 2rem;
+            font-size: 1.2rem;
+          }
+
+          a:hover,
+          a:active {
+            transform: rotateY(90deg);
+          }
+
+          a:link::after,
+          a:visited::after {
+            top: 0;
+            bottom: 100%;
+            left: 100%;
+            width: 100%;
+            height: 100%;
+
+            transform-origin: left;
+            transform: rotateY(-90deg);
+          }
+        }
+
+        &__toggle-container {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

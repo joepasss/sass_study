@@ -1,3 +1,17 @@
+// 1300px break point
+@mixin media-desktop {
+  @media screen and (min-width: break-point(desktop)) {
+    @content;
+  }
+}
+
+// 800px break point
+@mixin media-tablet {
+  @media screen and (max-width: break-point(tablet)) {
+    @content;
+  }
+}
+
 @import './reset';
 @import './variables';
 @import './utilities';
