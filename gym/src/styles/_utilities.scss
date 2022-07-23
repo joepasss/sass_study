@@ -18,3 +18,15 @@ body {
     [center-end] 1fr [container-end];
   grid-template-rows: min-content 100vh repeat(9, min-content);
 }
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--color-quinary);
+  font-weight: font-weight(small);
+}
+
+i {
+  color: var(--color-primary);
+  font-size: font-size(medium);
+}
