@@ -221,8 +221,8 @@
       }
     }
 
-    &.open nav {
-      transform-origin: rotateY(0);
+    nav.open {
+      transform: rotateY(0turn);
     }
 
     &__menu {
