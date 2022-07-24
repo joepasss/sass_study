@@ -1,20 +1,44 @@
-import { FC, useState } from 'react';
+import { FC, useState, useEffect } from 'react';
 
 import logo from '../../img/logo/logo.svg';
 
 export const Header: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState<boolean>(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
+  const toggle = (opt: string) => {
+    if (opt === 'Menu') {
+      setIsOpen(!isOpen);
+    } else {
+      setIsDark(!isDark);
+    }
   };
+
+  useEffect(() => {
+    let htmlElement = document.documentElement;
+
+    const smoothTrans = () => {
+      htmlElement.classList.add('transition');
+      window.setTimeout(() => {
+        htmlElement.classList.remove('transition');
+      }, 1000);
+    };
+
+    if (isDark) {
+      smoothTrans();
+      htmlElement.setAttribute('data-theme', 'dark');
+    } else {
+      smoothTrans();
+      htmlElement.setAttribute('data-theme', 'light');
+    }
+  }, [isDark]);
 
   return (
     <header className={isOpen ? 'header open' : 'header'}>
       {/* hamburger lines */}
       <div
         className={isOpen ? 'header__menu open' : 'header__menu'}
-        onClick={() => toggle()}
+        onClick={() => toggle('Menu')}
       >
         <div className='header__menu--line'></div>
       </div>
@@ -68,7 +92,12 @@ export const Header: FC = () => {
           </li>
 
           <div className='header__nav--links__toggle-container'>
-            <input type='checkbox' id='toggle' name='theme' />
+            <input
+              type='checkbox'
+              id='toggle'
+              name='theme'
+              onClick={() => toggle('DarkMode')}
+            />
           </div>
         </ul>
       </nav>
