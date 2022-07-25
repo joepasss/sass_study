@@ -61,7 +61,7 @@
       flex-direction: column;
       text-align: center;
       z-index: 20;
-      // transform: perspective(70rem) rotateY(0.5turn);
+      transform: perspective(70rem) rotateY(0.5turn);
       transform-origin: top left;
       transition: transform 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
@@ -103,6 +103,31 @@
           justify-content: center;
         }
       }
+    }
+
+    div.menu_open {
+      div.header__menu--line {
+        background-color: transparent;
+      }
+
+      div.header__menu--line::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      div.header__menu--line::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    div.overlay_open {
+      display: block;
+      opacity: 0.8;
+    }
+
+    nav.nav_open {
+      transform: rotateY(0turn);
     }
   }
 }
