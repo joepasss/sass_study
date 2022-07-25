@@ -12,6 +12,20 @@
   }
 }
 
+// 600px Mark Break Point
+@mixin media-medium {
+  @media screen and (max-width: break-point(medium)) {
+    @content;
+  }
+}
+
+// 400px Mark Break Point
+@mixin media-small {
+  @media screen and (max-width: break-point(small)) {
+    @content;
+  }
+}
+
 ::selection {
   background-color: rgba(0, 0, 0, 0.3);
 }
