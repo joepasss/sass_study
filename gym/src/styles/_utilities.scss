@@ -19,6 +19,9 @@ body {
   grid-template-rows: min-content 90vh repeat(9, min-content);
 
   // Media Query
+  @include media-tablet {
+    grid-template-rows: min-content 100vh repeat(9, min-content);
+  }
 }
 
 li {
