@@ -12,6 +12,10 @@
   }
 }
 
+::selection {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 @import './reset';
 @import './variables';
 @import './utilities';
@@ -26,6 +30,46 @@
 @import '../sections/clients/clients';
 @import '../sections/register/register';
 @import '../sections/footer/footer';
+
+// Placeholder Styles
+// Background Properties
+%bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// Section Padding
+%sec-padding {
+  padding: 6vh 4vw;
+}
+
+// Section Heading (h2)
+%sec-heading {
+  font-size: font-size(medium);
+  font-weight: font-weight(light);
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+}
+
+// Section Paragraphs (p)
+%sec-para {
+  font-size: font-size(small);
+  color: var(--color-quinary);
+  font-family: $font-balsamiq;
+  letter-spacing: 0.2rem;
+}
+
+// Section h3
+%sec-h3 {
+  font-size: font-size(small);
+  color: var(--color-quinary);
+}
+
+// Section h4
+%sec-h4 {
+  color: var(--color-quinary);
+}
 
 // Dark Mode Smooth Transition For All HTML Element
 html.transition,

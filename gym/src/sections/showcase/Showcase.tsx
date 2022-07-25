@@ -6,7 +6,7 @@ export const Showcase: FC = () => {
       <div className='showcase__content'>
         <h1 className='showcase__content--title'>Commit to be fit</h1>
         <p className='showcase__content--para'>
-          Lorem ipsum dolor sit amet consectetur adipisicing.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, maxime.
         </p>
         <div className='showcase__content--links'>
           <a href='#!'>Find out more</a>
