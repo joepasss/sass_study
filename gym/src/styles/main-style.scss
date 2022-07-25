@@ -26,3 +26,12 @@
 @import '../sections/clients/clients';
 @import '../sections/register/register';
 @import '../sections/footer/footer';
+
+// Dark Mode Smooth Transition For All HTML Element
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.5s !important;
+  transition-delay: 0 !important;
+}
