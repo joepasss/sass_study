@@ -1,0 +1,51 @@
+@include media-tablet {
+  &__content {
+    &--title {
+      text-align: center;
+    }
+
+    &--links {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@include media-medium {
+  padding: 4rem;
+
+  &__content {
+    &--title {
+      font-size: font-size(xlarge);
+      font-weight: font-weight(regular);
+    }
+
+    &--para {
+      font-size: 2rem;
+    }
+
+    &--links {
+      a:link,
+      a:visited {
+        font-size: font-size(small);
+      }
+    }
+  }
+}
+
+@include media-small {
+  &__content {
+    &--links {
+      flex-direction: column;
+      align-items: flex-start;
+
+      a:link,
+      a:visited {
+        display: inline-block;
+
+        &:first-child {
+          margin-bottom: 5vw;
+        }
+      }
+    }
+  }
+}

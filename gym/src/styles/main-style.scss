@@ -12,6 +12,20 @@
   }
 }
 
+// 600px break point
+@mixin media-medium {
+  @media screen and (max-width: break-point(medium)) {
+    @content;
+  }
+}
+
+// 400px break point
+@mixin media-small {
+  @media screen and (max-width: break-point(small)) {
+    @content;
+  }
+}
+
 @import './reset';
 @import './variables';
 @import './utilities';
@@ -26,6 +40,17 @@
 @import '../sections/clients/clients';
 @import '../sections/register/register';
 @import '../sections/footer/footer';
+
+// Placeholder Styles
+%bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%sec-padding {
+  padding: 6vh 4vw;
+}
 
 // Dark Mode Smooth Transition For All HTML Element
 html.transition,
