@@ -52,6 +52,20 @@
   padding: 6vh 4vw;
 }
 
+%sec-heading {
+  font-size: font-size(medium);
+  font-weight: font-weight(light);
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+}
+
+%sec-para {
+  font-size: font-size(small);
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+  font-family: $font-balsamiq;
+}
+
 // Dark Mode Smooth Transition For All HTML Element
 html.transition,
 html.transition *,
