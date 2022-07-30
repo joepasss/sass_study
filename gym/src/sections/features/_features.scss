@@ -1,4 +1,15 @@
-section.features {
-  background-color: var(--color-secondary);
+.features {
   grid-column: container-start / container-end;
+
+  &__content {
+    @extend %bg;
+  }
+}
+
+@for $img from 1 through 9 {
+  .features {
+    &__content:nth-child(#{$img}) {
+      background-image: url('../../img/features/features-#{$img}.jpg');
+    }
+  }
 }
