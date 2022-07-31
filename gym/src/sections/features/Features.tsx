@@ -40,7 +40,7 @@ export const Features: FC = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
             molestiae?
           </p>
-          <a href='#!' className='features__content--lik'>
+          <a href='#!' className='features__content--link'>
             Read More
             <span></span>
             <span></span>

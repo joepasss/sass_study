@@ -1,8 +1,137 @@
 .features {
   grid-column: container-start / container-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
 
   &__content {
     @extend %bg;
+
+    display: grid;
+    gap: 2vw;
+    padding: 2rem 4rem;
+    height: 40rem;
+    align-items: center;
+
+    &--title {
+      @extend %sec-heading;
+
+      font-weight: font-weight(bold) !important;
+      align-self: flex-end;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-primary-m);
+
+        z-index: -1;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+
+    &:hover &--title::before,
+    &:active &--title::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    &--para {
+      @extend %sec-para;
+
+      font-weight: font-weight(medium) !important;
+      background-color: var(--color-primary-m);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    &--link:link,
+    &--link:visited {
+      padding: 1rem 1.7rem;
+      justify-self: start;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      span {
+        position: absolute;
+        display: block;
+      }
+
+      span:nth-child(1) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        background-image: linear-gradient(
+          90deg,
+          transparent,
+          var(--color-primary)
+        );
+        animation: border1 1s linear infinite;
+        animation-delay: 0s;
+      }
+
+      span:nth-child(2) {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0.5rem;
+        background-image: linear-gradient(
+          180deg,
+          transparent,
+          var(--color-primary)
+        );
+        animation: border2 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+
+      span:nth-child(3) {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        background-image: linear-gradient(
+          270deg,
+          transparent,
+          var(--color-primary)
+        );
+        animation: border3 1s linear infinite;
+        animation-delay: 1s;
+      }
+
+      span:nth-child(4) {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0.5rem;
+        background-image: linear-gradient(
+          360deg,
+          transparent,
+          var(--color-primary)
+        );
+        animation: border4 1s linear infinite;
+        animation-delay: 1.5s;
+      }
+    }
+
+    &--link:hover,
+    &--link:active {
+      background-color: var(--color-primary);
+    }
+  }
+
+  @include media-small {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }
 
@@ -11,5 +140,45 @@
     &__content:nth-child(#{$img}) {
       background-image: url('../../img/features/features-#{$img}.jpg');
     }
+  }
+}
+
+@keyframes border1 {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes border2 {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes border3 {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes border4 {
+  from {
+    top: 100%;
+  }
+
+  to {
+    top: -100%;
   }
 }
