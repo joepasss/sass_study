@@ -47,22 +47,22 @@ export const Testimonials: FC = () => {
               </h3>
             </div>
           ))}
+        </div>
 
-          <div className='testimonials__content--indicator'>
-            {indicatorContent.map((item: string, index: number) => (
-              <img
-                src={item}
-                alt={`testimonial-${index}`}
-                key={index}
-                data-id={index}
-                className={
-                  selected === index
-                    ? 'testimonials__content--indicator--img active'
-                    : 'testimonials__content--indicator--img'
-                }
-              />
-            ))}
-          </div>
+        <div className='testimonials__content--indicator'>
+          {indicatorContent.map((item: string, index: number) => (
+            <img
+              src={item}
+              alt={`testimonial-${index}`}
+              key={index}
+              data-id={index}
+              className={
+                selected === index
+                  ? 'testimonials__content--indicator__img active'
+                  : 'testimonials__content--indicator__img'
+              }
+            />
+          ))}
         </div>
       </div>
     </section>
