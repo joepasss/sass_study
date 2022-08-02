@@ -66,6 +66,15 @@
   font-family: $font-balsamiq;
 }
 
+%sec-h3 {
+  font-size: font-size(small);
+  color: var(--color-quinary);
+}
+
+%sec-h4 {
+  color: var(--color-quinary);
+}
+
 // Dark Mode Smooth Transition For All HTML Element
 html.transition,
 html.transition *,
