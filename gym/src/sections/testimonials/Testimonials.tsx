@@ -56,6 +56,7 @@ export const Testimonials: FC = () => {
               alt={`testimonial-${index}`}
               key={index}
               data-id={index}
+              onClick={() => setSelected(index)}
               className={
                 selected === index
                   ? 'testimonials__content--indicator__img active'
